@@ -1,5 +1,5 @@
 
-{config, lib, pkgs, ... };
+{config, lib, pkgs, ... }:
 {
     # System-wide packages
     environment.systemPackages = with pkgs; [
