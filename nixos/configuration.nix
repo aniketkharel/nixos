@@ -81,13 +81,7 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-  console = {
-     font = "Lat2-Terminus16";
-     keyMap = "us";
-     useXkbConfig = true; # use xkbOptions in tty.
-  };
 
-  # TODO: This is just an example, be sure to use whatever bootloader you prefer
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
   boot.loader.grub.device = "/dev/sda";
