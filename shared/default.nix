@@ -1,8 +1,5 @@
 
-{config, lib, pkgs }:
-let 
-  user = "kratos";
-in
+{config, lib, pkgs, ... };
 {
     # System-wide packages
     environment.systemPackages = with pkgs; [
