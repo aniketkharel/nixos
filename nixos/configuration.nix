@@ -60,8 +60,43 @@
     };
   };
 
-  # TODO: Set your hostname
+  # Configure keymap in X11
+  services.xserver.layout = "us";
+
+  services.xserver.xkbOptions = {
+     "eurosign:e";
+     "caps:escape" # map caps to escape.
+  };
+
+  # Enable CUPS to print documents.
+  services.printing.enable = true;
+
+  # Enable sound.
+  sound.enable = true;
+  hardware.pulseaudio.enable = true;
+
+  # Enable touchpad support (enabled default in most desktopManager).
+  services.xserver.libinput.enable = true;
+
   networking.hostName = "kratos";
+  # Pick only one of the below networking options.
+  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+
+  # Set your time zone.
+  time.timeZone = "Asia/Kathmandu";
+
+  # Configure network proxy if necessary
+  # networking.proxy.default = "http://user:password@proxy:port/";
+  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+
+  # Select internationalisation properties.
+  i18n.defaultLocale = "en_US.UTF-8";
+  console = {
+     font = "Lat2-Terminus16";
+     keyMap = "us";
+     useXkbConfig = true; # use xkbOptions in tty.
+  };
 
   # TODO: This is just an example, be sure to use whatever bootloader you prefer
   boot.loader.grub.enable = true;
@@ -115,3 +150,4 @@
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "22.11";
 }
+
