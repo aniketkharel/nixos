@@ -89,7 +89,7 @@
       enable = true;
       displayManager = {
           lightdm = {enable = true;};
-          defaultSession = "none+xfce";
+          defaultSession = "xfce";
         };
 
       desktopManager = {
