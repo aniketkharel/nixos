@@ -60,18 +60,12 @@
     };
   };
 
-  # Configure keymap in X11
-  services.xserver.layout = "us";
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
   # Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput.enable = true;
 
   networking.hostName = "kratos";
   # Pick only one of the below networking options.
@@ -117,6 +111,8 @@
   services = {
     xserver = {
       enable = true;
+      layout = "us";
+      libinput = {enable = true;};
       displayManager = {
           lightdm = {enable = true;};
           defaultSession = "xfce";
