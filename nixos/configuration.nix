@@ -64,7 +64,9 @@
   networking.hostName = "kratos";
 
   # TODO: This is just an example, be sure to use whatever bootloader you prefer
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.grub.enable = true;
+  boot.loader.grub.version = 2;
+  boot.loader.grub.device = "/dev/sda";
 
   # TODO: Configure your system-wide user settings (groups, etc), add more users as needed.
   users.users = {
