@@ -1,7 +1,7 @@
 
 {config, lib, pkgs }:
 let 
-  user = "kratos"
+  user = "kratos";
 in
 {
     # System-wide packages
