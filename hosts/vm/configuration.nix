@@ -16,7 +16,6 @@
   ];
 
   nixpkgs = {
-    # You can add overlays here
     overlays = [
       # Add overlays your own flake exports (from overlays and pkgs dir):
       outputs.overlays.additions
@@ -124,8 +123,8 @@
       };
   };
 
-#docker
-  virtualisation.docker.enable
+  #docker
+  virtualisation = {docker= {enable = true;};};
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "22.11";
 }
