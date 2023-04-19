@@ -65,8 +65,7 @@
   # xdf neovim configs
   xdg.configFile = {
     nvim = {
-      source = ../configs;
-      recursive = true;
+      source = ../configs/nvim;
     };
   };
 
