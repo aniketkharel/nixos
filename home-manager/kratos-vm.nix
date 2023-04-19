@@ -43,7 +43,7 @@
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
-  home.packages = with pkgs; [ firefox flameshot alacritty exa bat tree-sitter gcc (nerdfonts.override { fonts = [ "CascadiaCode" "FiraCode" "Feather" ]; }) nodejs picom i3blocks polybar rofi autotiling];
+  home.packages = with pkgs; [ firefox flameshot alacritty exa bat tree-sitter gcc (nerdfonts.override { fonts = [ "CascadiaCode" "FiraCode" "Feather" ]; }) nodejs picom i3blocks rofi autotiling];
 
   programs = {
     zsh = {
@@ -80,9 +80,6 @@
     };
     rofi = {
       source = ../configs/rofi;
-    };
-    polybar = {
-      source = ../configs/polybar;
     };
   };
 

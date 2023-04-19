@@ -464,9 +464,28 @@ client.urgent		    	  $urgentred	$urgentred	$white	$yellowbrown  $yellowbrown
 ############################################
 # bar settings (input comes from i3blocks) #
 ############################################
+ bar {
+	font pango: CaskaydiaCove Nerd Font 10
+	status_command i3blocks -c ~/.config/i3/i3blocks.conf
+	#i3bar_command i3bar --transparency
+  # tray_output primary
+  binding_mode_indicator yes
+  # output HDMI-0
+	position bottom
+  strip_workspace_numbers no
+  colors {
+    separator           $purple
+    background          $lightBg
+    statusline          $statusTexts
+    focused_workspace	  $active_border   $active_border	  $lightBg	   $purple
+    active_workspace	  $lightBg         $lightBg	        $statusTexts $purple
+    inactive_workspace  $statusTexts	   $lightBg  	      $statusTexts $purple
+    urgent_workspace	  $lightBg	       $lightBg	        $white		   $purple
+    }
+}
 
 # polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 #####################################
 # Application menu handled by rofi: #
