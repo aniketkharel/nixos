@@ -20,7 +20,6 @@
       gnupg1compat
       htop
       imagemagick
-      iotop
       lsof
       lynx
       man-pages
@@ -38,5 +37,6 @@
       curl
       which
       whois
+      sysstat
     ];
 }
