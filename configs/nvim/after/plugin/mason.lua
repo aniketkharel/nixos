@@ -19,12 +19,10 @@ mason.setup({
 
 lspconfig.setup({
 	ensure_installed = {
-		-- lsps
 		"clangd",
 		"tailwindcss",
 		"tsserver",
 		"html",
-		"ccls",
 		"rust_analyzer",
 		"bashls",
 		"dockerls",
