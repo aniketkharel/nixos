@@ -50,10 +50,10 @@
       enable = true;
       userName = "aniketkhareldev";
       userEmail = "aniketkhareldev@gmail.com";
-      userSigningkey = "/home/kratos/.ssh/id_rsa.pub";
-      commitSign = true;
-      commitGpgsign = true;
-      gpgFormat = "ssh";
+      signing = { 
+        signByDefault = true;
+        key = "/home/kratos/.ssh/id_rsa.pub"; 
+      };
     };
   };
 
