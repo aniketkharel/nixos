@@ -10,6 +10,7 @@
       docker-compose
       neovim
       fd
+      feh
       file
       fortune
       fzf
