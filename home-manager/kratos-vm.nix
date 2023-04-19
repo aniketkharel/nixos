@@ -48,18 +48,12 @@
   programs = {
     git = {
       enable = true;
-      user = {
-        email = "aniketkhareldev@gmail.com";
-        name =  "aniketkhareldev";
-        signingKey = "$HOME/.ssh/id_rsa.pub";
-      };
-      commit = {
-        sign = true;
-        gpgSign = true;
-      };
-      gpg = {
-        formart = "ssh";
-      };
+      userName = "aniketkhareldev";
+      userEmail = "aniketkhareldev@gmail.com";
+      userSigningkey = "/home/kratos/.ssh/id_rsa.pub";
+      commitSign = true;
+      commitGpgsign = true;
+      gpgFormat = "ssh";
     };
   };
 
