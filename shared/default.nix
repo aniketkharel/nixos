@@ -14,6 +14,7 @@
       fortune
       fzf
       git
+      zsh
       gnum4
       gnupg
       gnupg1compat

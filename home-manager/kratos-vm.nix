@@ -38,7 +38,29 @@
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
-  home.packages = with pkgs; [ firefox flameshot alacritty];
+  home.packages = with pkgs; [ firefox flameshot alacritty exa bat];
+
+  programs = {
+    zsh = {
+      enable = true;
+      shellAliases = {
+        rm = "rm -i";
+        cp = "cp -i";
+        cpr = "cp -r";
+        mv = "mv -i";
+        mkdir = "mkdir -p";
+        v = "nvim .";
+      };
+      shellAbbrs = {
+        g = "git";
+        v = "nvim";
+      };
+    };
+
+  # session vars  
+  sessionVariables = {
+      EDITOR = "neovim";
+  };
 
   programs.home-manager.enable = true;
 
