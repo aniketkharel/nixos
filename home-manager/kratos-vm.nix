@@ -43,7 +43,7 @@
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
-  home.packages = with pkgs; [ firefox flameshot alacritty exa bat tree-sitter gcc (nerdfonts.override { fonts = [ "CascadiaCode" "FiraCode", "Feather" ]; }) nodejs picom i3blocks polybar rofi autotiling];
+  home.packages = with pkgs; [ firefox flameshot alacritty exa bat tree-sitter gcc (nerdfonts.override { fonts = [ "CascadiaCode" "FiraCode" "Feather" ]; }) nodejs picom i3blocks polybar rofi autotiling];
 
   programs = {
     zsh = {
@@ -73,7 +73,7 @@
       source = ../configs/nvim;
     };
     alacritty = {
-      source = ../configs/alacritty.yml;
+      source = ../configs/alacritty;
     };
     i3 = {
       source = ../configs/i3;

@@ -1,3 +1,8 @@
+# themes
+import:
+  - ~/.config/alacritty/themes/themes/github_light.yaml
+
+# Font configuration
 font:
   size: 12
   offset:
