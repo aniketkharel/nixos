@@ -51,7 +51,14 @@
       userName = "aniketkhareldev";
       userEmail = "aniketkhareldev@gmail.com";
       signing = { 
+        signByDefault = true;
         key = "/home/kratos/.ssh/id_rsa.pub"; 
+      };
+      gpg = {
+        enable = true;
+        useAgent = true;
+        program = "/usr/bin/gpg2"; # Specify the path to your GPG program
+          home = "/home/kratos/.gnupg"; # Specify the path to your GPG home directory
       };
     };
   };
