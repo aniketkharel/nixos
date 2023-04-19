@@ -23,7 +23,6 @@
       AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '⇣' '⇡' '+' 'x' '!' '>' '?' )
       AGKOZAK_MULTILINE=0
       AGKOZAK_PROMPT_CHAR=( ❯ ❯ ❮ )
-      eval $(thefuck --alias)
       autopair-init
                               '';
 
