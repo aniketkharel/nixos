@@ -51,7 +51,6 @@
       userName = "aniketkhareldev";
       userEmail = "aniketkhareldev@gmail.com";
       signing = { 
-        signByDefault = true;
         key = "/home/kratos/.ssh/id_rsa.pub"; 
       };
     };
