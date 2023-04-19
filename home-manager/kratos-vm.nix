@@ -34,6 +34,9 @@
   home = {
     username = "kratos-vm";
     homeDirectory = "/home/kratos-vm";
+    sessionVariables = {
+      EDITOR = "nvim";
+    };
   };
 
   # Add stuff for your user as you see fit:
@@ -51,6 +54,11 @@
         mkdir = "mkdir -p";
         v = "nvim .";
       };
+    };
+    git = {
+      enable = true;
+      userName = "aniketkhareldev";
+      userEmail = "aniketkhareldev@gmail.com";
     };
   };
 
