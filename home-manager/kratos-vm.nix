@@ -35,7 +35,7 @@
     username = "kratos-vm";
     homeDirectory = "/home/kratos-vm";
     sessionVariables = {
-      EDITOR = "nvim";
+      EDITOR = "neovim";
     };
   };
 
@@ -60,11 +60,6 @@
       userName = "aniketkhareldev";
       userEmail = "aniketkhareldev@gmail.com";
     };
-  };
-
-  # session vars  
-  sessionVariables = {
-      EDITOR = "neovim";
   };
 
   programs.home-manager.enable = true;
