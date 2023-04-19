@@ -72,6 +72,9 @@
     nvim = {
       source = ../configs/nvim;
     };
+    alacritty = {
+      source = ../configs/alacritty.yml;
+    };
   };
 
   programs.home-manager.enable = true;
