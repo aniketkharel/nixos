@@ -51,10 +51,6 @@
         mkdir = "mkdir -p";
         v = "nvim .";
       };
-      shellAbbrs = {
-        g = "git";
-        v = "nvim";
-      };
     };
   };
 
