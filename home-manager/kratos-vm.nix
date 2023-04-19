@@ -56,6 +56,7 @@
         v = "nvim";
       };
     };
+  };
 
   # session vars  
   sessionVariables = {
