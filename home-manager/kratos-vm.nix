@@ -41,11 +41,14 @@
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
-  home.packages = with pkgs; [ firefox flameshot alacritty exa bat];
+  home.packages = with pkgs; [ firefox flameshot alacritty exa bat tree-sitter gcc];
 
   programs = {
     zsh = {
       enable = true;
+      enableAutosuggestions = true;
+      enableCompletion = true;
+      enableSyntaxHighlighting = true;
       shellAliases = {
         rm = "rm -i";
         cp = "cp -i";
@@ -66,6 +69,9 @@
   xdg.configFile = {
     nvim = {
       source = ../configs/nvim;
+    };
+    zsh = {
+      source = ../configs/.zshrc;
     };
   };
 
