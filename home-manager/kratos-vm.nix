@@ -85,7 +85,6 @@
       source = ../configs/polybar;
     };
   };
-  };
 
   programs.home-manager.enable = true;
 
