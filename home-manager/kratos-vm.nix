@@ -51,7 +51,7 @@
       user = {
         email = "aniketkhareldev@gmail.com";
         name =  "aniketkhareldev";
-        signingKey = $HOME/.ssh/id_rsa.pub;
+        signingKey = "$HOME/.ssh/id_rsa.pub";
       };
       commit = {
         sign = true;
