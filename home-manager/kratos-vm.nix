@@ -46,20 +46,6 @@
   home.packages = with pkgs; [ firefox flameshot alacritty exa bat tree-sitter gcc (nerdfonts.override { fonts = [ "CascadiaCode" "FiraCode" ]; }) nodejs picom i3blocks rofi autotiling];
 
   programs = {
-    zsh = {
-      enable = true;
-      enableAutosuggestions = true;
-      enableCompletion = true;
-      enableSyntaxHighlighting = true;
-      shellAliases = {
-        rm = "rm -i";
-        cp = "cp -i";
-        cpr = "cp -r";
-        mv = "mv -i";
-        mkdir = "mkdir -p";
-        v = "nvim .";
-      };
-    };
     git = {
       enable = true;
       userName = "aniketkhareldev";
