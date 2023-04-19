@@ -34,6 +34,17 @@ parted /dev/sda -- mkpart primary 1MiB -8GiB (512MiB -8GiB for uefi)
 mkfs.ext4 -L nixos /dev/sda1
 ```
 
+To apply home configrationsm run, this is with standalone installer.
+If you don't have home-manager installed, try,
+
+```sh
+nix shell nixpkgs#home-manager.
+```
+
+```sh
+ home-manager --flake .#your-username@your-hostname'
+```
+
 ## Packages, services, settings, etc.
 
 ### NixEnv
