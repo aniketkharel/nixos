@@ -10,11 +10,11 @@
     chars = "\\x0c";
   }
   ];
-  font = {
-    size = 12;
-    normal = {
-      family = "Caskaydia Cove Nerd Font";
-      style = "Medium";
-    };
-  };
+  # font = {
+  #   size = 12;
+  #   normal = {
+  #     family = "Caskaydia Cove Nerd Font";
+  #     style = "Medium";
+  #   };
+  # };
 }
