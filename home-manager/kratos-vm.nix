@@ -1,13 +1,13 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   imports = [
     # If you want to use modules your own flake exports (from modules/home-manager):
-    # outputs.homeManagerModules.example
+    # outputs.homeManagerModules
 
     # Or modules exported from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModules.default
 
     # You can also split up your configuration and import pieces of it here:
-    # ./nvim.nix
+    ../modules/home-manager
   ];
 
   nixpkgs = {
@@ -31,6 +31,8 @@
     };
   };
 
+  fonts.fontconfig.enable = true;
+
   home = {
     username = "kratos-vm";
     homeDirectory = "/home/kratos-vm";
@@ -41,7 +43,7 @@
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
-  home.packages = with pkgs; [ firefox flameshot alacritty exa bat tree-sitter gcc];
+  home.packages = with pkgs; [ firefox flameshot alacritty exa bat tree-sitter gcc  (nerdfonts.override { fonts = [ "CascadiaCode" "FiraCode" ]; })];
 
   programs = {
     zsh = {
@@ -69,9 +71,6 @@
   xdg.configFile = {
     nvim = {
       source = ../configs/nvim;
-    };
-    zsh = {
-      source = ../configs/.zshrc;
     };
   };
 
