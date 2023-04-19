@@ -78,6 +78,13 @@
     i3 = {
       source = ../configs/i3;
     };
+    rofi = {
+      source = ../configs/rofi;
+    };
+    polybar = {
+      source = ../configs/polybar;
+    };
+  };
   };
 
   programs.home-manager.enable = true;
