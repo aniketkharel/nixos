@@ -118,6 +118,10 @@
 
   #docker
   virtualisation = {docker= {enable = true;};};
+
+  # Open ports in the firewall.
+  networking.firewall.allowedTCPPorts = [ 22 ];
+
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "22.11";
 }

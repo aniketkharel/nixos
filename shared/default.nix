@@ -39,6 +39,7 @@
       which
       whois
       sysstat
+      xclip
     ];
     environment.shells = with pkgs; [zsh];
 }
