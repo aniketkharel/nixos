@@ -11,11 +11,12 @@ fetchzip rec {
 
   postFetch = ''
     mkdir -p $out/share/{doc,fonts}
-    unzip -j $downloadedFile \*.otf    -d $out/share/fonts/opentype
+    unzip -j $downloadedFile \*    -d $out/share/fonts/opentype
     unzip -j $downloadedFile README.md -d $out/share/doc/${name}
   '';
 
   # sha256 = "sha256-XwUqM1BC80J74P0qk6EOnNiqkX61cgnXBq8S8slGpps=";
+  stripRoot = false;
 
   meta = with lib; {
     homepage = "https://github.com/ryanoasis/nerd-fonts";
