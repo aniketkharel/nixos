@@ -1,0 +1,9 @@
+[user]
+  name = aniketkharel
+	email = aniketkhareldev@gmail.com
+	signingkey = ~/.ssh/id_rsa.pub
+[commit]
+	sign = true
+	gpgsign = true
+[gpg]
+	format = ssh

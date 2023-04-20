@@ -51,10 +51,6 @@
       enable = true;
       userName = "aniketkhareldev";
       userEmail = "aniketkhareldev@gmail.com";
-      signing = { 
-        signByDefault = true;
-        key = "/home/kratos-vm/.ssh/id_rsa.pub"; 
-      };
     };
   };
 
@@ -72,6 +68,10 @@
     rofi = {
       source = ../configs/rofi;
     };
+    git = {
+      source = ../configs/git;
+    };
+
   };
 
   programs.home-manager.enable = true;
