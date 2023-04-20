@@ -52,7 +52,7 @@
       userEmail = "aniketkhareldev@gmail.com";
       signing = { 
         signByDefault = true;
-        key = "/home/kratos/.ssh/id_rsa.pub"; 
+        key = "/home/kratos-vm/.ssh/id_rsa.pub"; 
       };
     };
   };
