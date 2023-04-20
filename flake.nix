@@ -1,13 +1,5 @@
 {
   description = "kratos new nix config";
-  templates = {
-    full = {
-      description = ''
-        kratos flake and starting point for my machines.
-        '';
-      path = ./;
-    };
-  };
   inputs = {
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
@@ -29,6 +21,13 @@
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
+    templates = {
+      full = {
+        description = ''
+          kratos flake and starting point for my machines.
+          '';
+      };
+    };
     let
       inherit (self) outputs;
       forAllSystems = nixpkgs.lib.genAttrs [
