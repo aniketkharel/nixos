@@ -1,5 +1,4 @@
 {
-  description = "kratos new nix config";
   inputs = {
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
