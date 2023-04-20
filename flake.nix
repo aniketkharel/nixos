@@ -13,7 +13,7 @@
           '';
       };
 
-      vm = {
+      personal = {
         path = ./personal;
         description = "A very basic personal machine flake template.";
         welcomeText = ''
@@ -21,7 +21,7 @@
           '';
       };
 
-      vm = {
+      work = {
         path = ./work;
         description = "A very basic work machine flake template.";
         welcomeText = ''
