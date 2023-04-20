@@ -40,4 +40,5 @@
       whois
       sysstat
     ];
+    environment.shells = with pkgs; [zsh];
 }

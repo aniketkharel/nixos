@@ -37,7 +37,8 @@
     username = "kratos-vm";
     homeDirectory = "/home/kratos-vm";
     sessionVariables = {
-      EDITOR = "neovim";
+      SHELL = "zsh";
+      EDITOR = "nvim";
     };
   };
 

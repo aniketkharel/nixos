@@ -81,6 +81,7 @@
 
   users.users = {
     kratos-vm = {
+      shell = pkgs.zsh;
       initialPassword = "tt";
       isNormalUser = true;
       openssh.authorizedKeys.keys = [
