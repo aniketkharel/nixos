@@ -39,6 +39,7 @@
           description = ''
             kratos flake and starting point for my machines.
             '';
+          path = .;
         };
       };
       # Your custom packages
