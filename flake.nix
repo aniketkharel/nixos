@@ -32,3 +32,4 @@
       defaultTemplate = self.templates.vm;
     };
   }
+}
