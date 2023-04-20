@@ -44,7 +44,7 @@
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
-  home.packages = with pkgs; [ firefox flameshot alacritty exa bat tree-sitter gcc (nerdfonts.override { fonts = [ "CascadiaCode" ]; }) cascadia-code nodejs picom i3blocks rofi autotiling];
+  home.packages = with pkgs; [ firefox flameshot alacritty exa bat tree-sitter gcc (nerdfonts.override { fonts = [ "CascadiaCode" ]; }) nodejs picom i3blocks rofi autotiling];
 
   programs = {
     git = {

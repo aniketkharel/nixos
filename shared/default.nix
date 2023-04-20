@@ -1,6 +1,10 @@
 
 {config, lib, pkgs, ... }:
 {
+    # fonts nix
+    imports = [
+      ./fonts.nix
+    ];
     # System-wide packages
     environment.systemPackages = with pkgs; [
       aspell
