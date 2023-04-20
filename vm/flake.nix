@@ -33,27 +33,6 @@
       user-vm = "kratos-vm";
     in
     rec {
-      templates = {
-        vm = {
-          description = ''
-            kratos flake and starting point for my virtual machine.
-            '';
-          path = ./vm;
-        };
-        personal = {
-          description = ''
-            kratos flake and starting point for my personal machine.
-            '';
-          path = ./personal;
-        };
-        work = {
-          description = ''
-            kratos flake and starting point for my work machine.
-            '';
-          path = ./work;
-        };
-      };
-      # Your custom packages
       # Acessible through 'nix build', 'nix shell', etc
       packages = forAllSystems (system:
         let pkgs = nixpkgs.legacyPackages.${system};
