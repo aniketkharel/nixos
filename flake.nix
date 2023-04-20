@@ -21,13 +21,6 @@
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
-    templates = {
-      full = {
-        description = ''
-          kratos flake and starting point for my machines.
-          '';
-      };
-    };
     let
       inherit (self) outputs;
       forAllSystems = nixpkgs.lib.genAttrs [
@@ -41,6 +34,13 @@
       user-vm = "kratos-vm";
     in
     rec {
+      templates = {
+        full = {
+          description = ''
+            kratos flake and starting point for my machines.
+            '';
+        };
+      };
       # Your custom packages
       # Acessible through 'nix build', 'nix shell', etc
       packages = forAllSystems (system:
