@@ -11,17 +11,14 @@
       fd
       feh
       file
-      fortune
       fzf
       git
       zsh
       gnum4
       gnupg
-      gnupg1compat
       htop
       imagemagick
       lsof
-      lynx
       man-pages
       ncdu
       psmisc
