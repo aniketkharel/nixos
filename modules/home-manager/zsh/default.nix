@@ -18,8 +18,8 @@
       gaf = "git add";
       gcmsg = "git commit -m";
       ggpush = "git push origin";
-      lzg = "lazygit"
-      lzd = "lazydocker"
+      lzg = "lazygit";
+      lzd = "lazydocker";
     };
 
     initExtra = ''
