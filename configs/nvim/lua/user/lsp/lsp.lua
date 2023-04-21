@@ -154,7 +154,7 @@ lspconfig["rust_analyzer"].setup({
 })
 
 -- nix lsp
-lspconfig["rnix-lsp"].setup({
+lspconfig["rnix_lsp"].setup({
 	root_dir = cwd,
 	cmd = { "rnix-lsp" },
 	capabilities = capabilities,
