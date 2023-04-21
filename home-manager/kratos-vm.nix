@@ -39,9 +39,6 @@ in
     fontconfig = {
       enable = true;
     };
-    fonts = with pkgs; [
-      (nerdfonts.override { fonts = [ "CascadiaCode" ]; })
-    ];
   };
 
   home = {
