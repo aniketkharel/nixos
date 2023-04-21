@@ -34,7 +34,15 @@ in
     };
   };
 
-  fonts.fontconfig.enable = true;
+  # fonts settings
+  fonts = {
+    fontconfig = {
+      enable = true;
+    };
+    fonts = with pkgs; [
+      (nerdfonts.override { fonts = [ "CascadiaCode" ]; })
+    ];
+  };
 
   home = {
     username = "kratos-vm";
@@ -45,7 +53,7 @@ in
     };
   };
 
-  home.packages = with pkgs; [ firefox flameshot alacritty exa bat tree-sitter gcc nodejs picom i3blocks rofi autotiling cascadia-code ];
+  home.packages = with pkgs; [ firefox flameshot alacritty exa bat tree-sitter gcc nodejs picom i3blocks rofi autotiling ];
 
   programs = {
     git = {

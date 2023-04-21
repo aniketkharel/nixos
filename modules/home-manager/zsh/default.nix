@@ -9,10 +9,15 @@
     enableCompletion = true;
     shellAliases = {
       sl = "exa";
-      ls = "exa";
+      ls = "exa --icons";
       l = "exa -l";
       la = "exa -la";
       ip = "ip --color=auto";
+      vim = "nvim";
+      ga = "git add .";
+      gaf = "git add";
+      gcmsg = "git commit -m";
+      ggpush = "git push origin";
     };
 
     initExtra = ''
