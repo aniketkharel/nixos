@@ -77,7 +77,9 @@ in
     git = {
       source = ../configs/git;
     };
-
+    tmux = {
+      source = ../configs/tmux;
+    };
   };
 
   programs.home-manager.enable = true;
