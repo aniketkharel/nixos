@@ -97,10 +97,9 @@
     };
   };
 
+  services.logind.extraConfig = "RuntimeDirectorySize=4G";
+
   services = {
-    logind = {
-      extraConfig = "RuntimeDirectorySize=4G";
-    };
     printing = { enable = true; };
     openssh = {
       enable = true;
