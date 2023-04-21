@@ -1,6 +1,5 @@
 { inputs, outputs, lib, config, pkgs, ... }: 
 let
-  cascadiacode = pkgs.callPackage ./fonts { };
 in 
 {
   imports = [
@@ -46,7 +45,7 @@ in
     };
   };
 
-  home.packages = with pkgs; [ firefox flameshot alacritty exa bat tree-sitter gcc (nerdfonts.override { fonts = [ "CascadiaCode" ]; }) nodejs picom i3blocks rofi autotiling];
+  home.packages = with pkgs; [ firefox flameshot alacritty exa bat tree-sitter gcc nodejs picom i3blocks rofi autotiling cascadia-code ];
 
   programs = {
     git = {
