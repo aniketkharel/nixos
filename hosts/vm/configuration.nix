@@ -97,7 +97,7 @@
     };
   };
 
-  services.logind.extraConfig = "RuntimeDirectorySize=4G";
+  services.logind.extraConfig = "RuntimeDirectorySize=1G";
 
   services = {
     printing = { enable = true; };
