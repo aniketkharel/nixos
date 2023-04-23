@@ -153,6 +153,14 @@ lspconfig["rust_analyzer"].setup({
 	on_attach = on_attach,
 })
 
+-- rnix
+lspconfig["rnix"].setup({
+	root_dir = cwd,
+	cmd = { "rnix-lsp" },
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
 local function lsp_highlight_document(client)
 	-- Set autocommands conditional on server_capabilities
 	local status_ok, illuminate = pcall(require, "illuminate")
