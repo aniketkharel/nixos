@@ -17,7 +17,6 @@ local plugins = {
 	"nvim-telescope/telescope.nvim",
 	"jose-elias-alvarez/null-ls.nvim",
 	"norcalli/nvim-colorizer.lua",
-	"akinsho/nvim-bufferline.lua",
 	"akinsho/toggleterm.nvim",
 	"nvim-lualine/lualine.nvim", -- status line/bar
 	"lewis6991/gitsigns.nvim", -- git signs for editing or any changes
@@ -61,7 +60,6 @@ local plugins = {
 			})
 		end,
 	},
-	{ "codota/tabnine-nvim", run = "./dl_binaries.sh" },
 	{
 		"m-demare/hlargs.nvim",
 		requires = { "nvim-treesitter/nvim-treesitter" },
