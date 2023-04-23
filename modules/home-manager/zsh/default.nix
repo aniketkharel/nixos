@@ -31,6 +31,7 @@
       AGKOZAK_COLORS_PROMPT_CHAR='magenta'
       AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '⇣' '⇡' '+' 'x' '!' '>' '?' )
       AGKOZAK_MULTILINE=0
+
       AGKOZAK_PROMPT_CHAR=( ❯ ❯ ❮ )
       autopair-init
                               '';
@@ -45,6 +46,16 @@
           sha256 = "1iz4l8777i52gfynzpf6yybrmics8g4i3f1xs3rqsr40bb89igrs";
         };
         file = "agkozak-zsh-prompt.plugin.zsh";
+      }
+      {
+        name = "enhancd";
+        file = "init.sh";
+        src = pkgs.fetchFromGitHub {
+          owner = "b4b4r07";
+          repo = "enhancd";
+          rev = "v2.2.1";
+          sha256 = "0iqa9j09fwm6nj5rpip87x3hnvbbz9w9ajgm6wkrd5fls8fn8i5g";
+        };
       }
       {
         name = "formarks";
