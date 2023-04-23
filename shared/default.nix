@@ -38,6 +38,7 @@
       xclip
       pkg-config
       openssl
+      zoxide
     ];
 
     # system shell
