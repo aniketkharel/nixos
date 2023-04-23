@@ -51,7 +51,7 @@ in
     };
   };
 
-  home.packages = with pkgs; [ firefox flameshot alacritty exa bat tree-sitter gcc nodejs picom i3blocks rofi autotiling lazygit lazydocker rust-analyzer rustup rnix-lsp wasm-pack cargo-generate ];
+  home.packages = with pkgs; [ firefox flameshot alacritty exa bat tree-sitter gcc nodejs picom i3blocks rofi autotiling lazygit lazydocker rust-analyzer rustup rnix-lsp wasm-pack cargo-generate haskellPackages.greenclip rofi-emoji];
 
   programs = {
     git = {
