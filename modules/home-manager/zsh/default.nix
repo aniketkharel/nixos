@@ -9,15 +9,17 @@
     enableCompletion = true;
     shellAliases = {
       sl = "exa";
-      ls = "exa --icons";
+      ls = "exa -al --icons";
       l = "exa -l";
       la = "exa -la";
       ip = "ip --color=auto";
       vim = "nvim";
+      tmx = "tmux";
       ga = "git add .";
       gaf = "git add";
       gcmsg = "git commit -m";
       ggpush = "git push origin";
+      ggpull = "git pull origin";
       lzg = "lazygit";
       lzd = "lazydocker";
     };

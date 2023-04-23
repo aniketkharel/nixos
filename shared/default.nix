@@ -36,6 +36,8 @@
       whois
       sysstat
       xclip
+      pkg-config
+      openssl
     ];
     environment.shells = with pkgs; [zsh];
 }
