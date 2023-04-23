@@ -17,6 +17,7 @@
       tmx = "tmux";
       ga = "git add .";
       gaf = "git add";
+      gs = "git status";
       gcmsg = "git commit -m";
       ggpush = "git push origin";
       ggpull = "git pull origin";
