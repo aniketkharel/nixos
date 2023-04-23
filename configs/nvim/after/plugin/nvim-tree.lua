@@ -4,7 +4,7 @@ vim.g.loaded_netrwPlugin = 1
 require("nvim-tree").setup({
   filters = { 
     custom = { "^.git$" }
-  }
+  },
   view = {
     adaptive_size = true
   }
