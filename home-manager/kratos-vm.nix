@@ -1,5 +1,5 @@
 { inputs, outputs, lib, config, pkgs, ... }: 
-let
+let 
 in 
 {
   imports = [
@@ -18,15 +18,7 @@ in
       outputs.overlays.additions
         outputs.overlays.modifications
         outputs.overlays.unstable-packages
-
-# neovim-nightly-overlay.overlays.default
-
-# Or define it inline, for example:
-# (final: prev: {
-#   hi = final.hello.overrideAttrs (oldAttrs: {
-#     patches = [ ./change-hello-to-hi.patch ];
-#   });
-# })
+        inputs.neovim-nightly-overlay.overlay
     ];
     config = {
       allowUnfree = true;
@@ -34,7 +26,7 @@ in
     };
   };
 
-  # fonts settings
+# fonts settings
   fonts = {
     fontconfig = {
       enable = true;
@@ -51,7 +43,7 @@ in
     };
   };
 
-  home.packages = with pkgs; [ firefox flameshot alacritty exa bat tree-sitter gcc nodejs picom i3blocks rofi autotiling lazygit lazydocker rust-analyzer rustup rnix-lsp wasm-pack cargo-generate haskellPackages.greenclip emote];
+  home.packages = with pkgs; [ firefox flameshot alacritty exa bat tree-sitter gcc nodejs picom i3blocks rofi autotiling lazygit lazydocker rust-analyzer rustup rnix-lsp wasm-pack cargo-generate haskellPackages.greenclip emote neovim-nightly];
 
   programs = {
     git = {
