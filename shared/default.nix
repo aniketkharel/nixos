@@ -39,5 +39,10 @@
       pkg-config
       openssl
     ];
+
+    # system shell
     environment.shells = with pkgs; [zsh];
+
+    # PKG_CONFIG_PATH variable
+    environment.variables.PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
 }
