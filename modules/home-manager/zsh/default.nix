@@ -31,7 +31,7 @@
       AGKOZAK_COLORS_PROMPT_CHAR='magenta'
       AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '⇣' '⇡' '+' 'x' '!' '>' '?' )
       AGKOZAK_MULTILINE=0
-
+      eval "$(zoxide init zsh)"
       AGKOZAK_PROMPT_CHAR=( ❯ ❯ ❮ )
       autopair-init
                               '';
