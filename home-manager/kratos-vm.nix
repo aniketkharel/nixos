@@ -43,7 +43,7 @@ in
     };
   };
 
-  home.packages = with pkgs; [ firefox flameshot alacritty exa bat tree-sitter gcc nodejs picom i3blocks rofi autotiling lazygit lazydocker rust-analyzer rustup rnix-lsp nixfmt sumneko-lua-language-server wasm-pack cargo-generate haskellPackages.greenclip emote neovim-nightly dbeaver postman ];
+  home.packages = with pkgs; [ firefox flameshot alacritty exa bat tree-sitter gcc nodejs picom i3blocks rofi autotiling lazygit lazydocker rust-analyzer rustup rnix-lsp nixfmt sumneko-lua-language-server wasm-pack cargo-generate haskellPackages.greenclip emote neovim-nightly postman ];
 
   programs = {
     git = {
