@@ -31,8 +31,9 @@
         "aarch64-darwin"
         "x86_64-darwin"
       ];
-      user = "kratos";
+      user-pc = "kratos";
       user-vm = "kratos-vm";
+      user-work = "kratos-work";
     in
     rec {
       # Acessible through 'nix build', 'nix shell', etc
@@ -65,21 +66,43 @@
             ./hosts/vm/configuration.nix
           ];
         };
+
+        laptop = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [
+            ./hosts/laptop/configuration.nix
+          ];
+        };
+
+        work = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [
+            ./hosts/work/configuration.nix
+          ];
+        };
       };
 
       # Standalone home-manager configuration entrypoint
       # Available through 'home-manager --flake .#your-username@your-hostname'
       homeConfigurations = {
-        # maybe personal config
-        "${user}@${user}" = home-manager.lib.homeManagerConfiguration {
+        # laptop user config
+        "${user-pc}@${user-pc}" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [
             ./home-manager/kratos.nix
           ];
         };
-        # vm configs
+        # vm user configs
         "${user-vm}@${user-vm}" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+          extraSpecialArgs = { inherit inputs outputs; };
+          modules = [
+            ./home-manager/kratos-vm.nix
+          ];
+        };
+        # work user configs
+        "${user-work}@${user-work}" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [
