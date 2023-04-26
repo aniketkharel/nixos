@@ -67,6 +67,7 @@ in
     dbeaver
     postman
     marksman
+    gnumake
   ];
 
   programs = {
