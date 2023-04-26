@@ -27,11 +27,7 @@ in
   };
 
   # fonts settings
-  fonts = {
-    fontconfig = {
-      enable = true;
-    };
-  };
+  fonts = { fontconfig = { enable = true; }; };
 
   home = {
     username = "kratos-vm";
@@ -43,7 +39,35 @@ in
     };
   };
 
-  home.packages = with pkgs; [ firefox flameshot alacritty exa bat tree-sitter gcc nodejs picom i3blocks rofi autotiling lazygit lazydocker rust-analyzer rustup rnix-lsp nixfmt sumneko-lua-language-server wasm-pack cargo-generate haskellPackages.greenclip emote neovim-nightly dbeaver postman ];
+  home.packages = with pkgs; [
+    firefox
+    flameshot
+    alacritty
+    exa
+    bat
+    tree-sitter
+    gcc
+    nodejs
+    picom
+    i3blocks
+    rofi
+    autotiling
+    lazygit
+    lazydocker
+    rust-analyzer
+    rustup
+    rnix-lsp
+    nixfmt
+    sumneko-lua-language-server
+    wasm-pack
+    cargo-generate
+    haskellPackages.greenclip
+    emote
+    neovim-nightly
+    dbeaver
+    postman
+    marksman
+  ];
 
   programs = {
     git = {
@@ -55,24 +79,12 @@ in
 
   # xdf neovim configs
   xdg.configFile = {
-    nvim = {
-      source = ../configs/nvim;
-    };
-    alacritty = {
-      source = ../configs/alacritty;
-    };
-    i3 = {
-      source = ../configs/i3;
-    };
-    rofi = {
-      source = ../configs/rofi;
-    };
-    git = {
-      source = ../configs/git;
-    };
-    tmux = {
-      source = ../configs/tmux;
-    };
+    nvim = { source = ../configs/nvim; };
+    alacritty = { source = ../configs/alacritty; };
+    i3 = { source = ../configs/i3; };
+    rofi = { source = ../configs/rofi; };
+    git = { source = ../configs/git; };
+    tmux = { source = ../configs/tmux; };
   };
 
   programs.home-manager.enable = true;

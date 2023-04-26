@@ -21,9 +21,7 @@
       outputs.overlays.modifications
       outputs.overlays.unstable-packages
     ];
-    config = {
-      allowUnfree = true;
-    };
+    config = { allowUnfree = true; };
   };
 
   nix = {
@@ -33,7 +31,8 @@
 
     # This will additionally add your inputs to the system's legacy channels
     # Making legacy nix commands consistent as well, awesome!
-    nixPath = lib.mapAttrsToList (key: value: "${key}=${value.to.path}") config.nix.registry;
+    nixPath = lib.mapAttrsToList (key: value: "${key}=${value.to.path}")
+      config.nix.registry;
 
     settings = {
       # Enable flakes and new 'nix' command
@@ -50,7 +49,8 @@
   networking.hostName = "kratos-vm";
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable =
+    true; # Easiest to use and most distros use this by default.
 
   # Set your time zone.
   time.timeZone = "Asia/Kathmandu";
@@ -68,9 +68,7 @@
 
   # fonts settings
   fonts = {
-    fonts = with pkgs; [
-      (nerdfonts.override { fonts = [ "CascadiaCode" ]; })
-    ];
+    fonts = with pkgs; [ (nerdfonts.override { fonts = [ "CascadiaCode" ]; }) ];
   };
 
   users.users = {
@@ -78,8 +76,7 @@
       shell = pkgs.zsh;
       initialPassword = "tt";
       isNormalUser = true;
-      openssh.authorizedKeys.keys = [
-      ];
+      openssh.authorizedKeys.keys = [ ];
       extraGroups = [ "wheel" "networkmanager" "docker" "audio" ];
     };
   };
@@ -96,28 +93,20 @@
     xserver = {
       enable = true;
       layout = "us";
-      libinput = {enable = true;};
+      libinput = { enable = true; };
       displayManager = {
-          lightdm = {enable = true;};
-          defaultSession = "xfce";
-        };
-
-      desktopManager = {
-          xfce = {enable = true;};
-        };
-
-      windowManager = {
-          i3 = {enable = true;};
-        };
+        lightdm = { enable = true; };
+        defaultSession = "xfce";
       };
+
+      desktopManager = { xfce = { enable = true; }; };
+
+      windowManager = { i3 = { enable = true; }; };
+    };
   };
 
   #docker
-  virtualisation = {
-    docker= {
-      enable = true;
-    };
-  };
+  virtualisation = { docker = { enable = true; }; };
 
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 22 ];
