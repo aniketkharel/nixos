@@ -18,6 +18,7 @@
       gnupg
       htop
       imagemagick
+      scrot
       lsof
       man-pages
       ncdu
@@ -39,6 +40,7 @@
       pkg-config
       openssl
       zoxide
+      marksman
     ];
 
     # system shell
