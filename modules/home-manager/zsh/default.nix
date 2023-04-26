@@ -35,7 +35,7 @@
       eval "$(zoxide init zsh)"
       AGKOZAK_PROMPT_CHAR=( ❯ ❯ ❮ )
       autopair-init
-                              '';
+    '';
 
     plugins = with pkgs; [
       {
