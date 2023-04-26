@@ -19,6 +19,7 @@
     # nix-colors.url = "github:misterio77/nix-colors";
     # neovim nightly
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    gita-greeter.url = "github:aniketkharel/gita-greeter";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:

@@ -3,4 +3,5 @@
 
 { pkgs ? (import ../nixpkgs.nix) { } }: {
   hello-world = pkgs.callPackage ./hello-custom { };
+  gita-greeter = pkgs.callPackage ./gita-greeter { };
 }
