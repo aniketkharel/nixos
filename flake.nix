@@ -19,7 +19,6 @@
     # nix-colors.url = "github:misterio77/nix-colors";
     # neovim nightly
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
-    gita-greeter.url = "github:aniketkharel/gita-greeter";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -29,8 +28,8 @@
         "aarch64-linux"
         "i686-linux"
         "x86_64-linux"
-        "aarch64-darwin"
         "x86_64-darwin"
+        "aarch64-darwin"
       ];
       user-pc = "kratos";
       user-vm = "kratos-vm";
