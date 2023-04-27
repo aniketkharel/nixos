@@ -35,6 +35,7 @@
       eval "$(zoxide init zsh)"
       AGKOZAK_PROMPT_CHAR=( ❯ ❯ ❮ )
       autopair-init
+      gita_greeter
     '';
 
     plugins = with pkgs; [
