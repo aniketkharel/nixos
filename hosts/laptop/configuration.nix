@@ -70,11 +70,6 @@
     };
   };
 
-  # fonts settings
-  fonts = {
-    fonts = with pkgs; [ (nerdfonts.override { fonts = [ "CascadiaCode" ]; }) ];
-  };
-
   users.users = {
     kratos = {
       shell = pkgs.zsh;

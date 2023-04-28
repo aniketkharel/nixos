@@ -66,11 +66,6 @@
   boot.loader.grub.version = 2;
   boot.loader.grub.device = "/dev/sda";
 
-  # fonts settings
-  fonts = {
-    fonts = with pkgs; [ (nerdfonts.override { fonts = [ "CascadiaCode" ]; }) ];
-  };
-
   users.users = {
     kratos-vm = {
       shell = pkgs.zsh;

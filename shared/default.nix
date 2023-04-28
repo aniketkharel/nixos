@@ -45,8 +45,8 @@
   # system shell
   environment.shells = with pkgs; [ zsh ];
 
-  # fonts
-  fonts.fonts = with pkgs; [
-    (nerdfonts.override { fonts = [ "CascadiaCode" ]; })
-  ];
+  # fonts settings
+  fonts = {
+    fonts = with pkgs; [ (nerdfonts.override { fonts = [ "CascadiaCode" ]; }) ];
+  };
 }
