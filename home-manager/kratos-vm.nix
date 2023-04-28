@@ -40,6 +40,7 @@ in
   home.packages = with pkgs; [
     firefox
     flameshot
+    simplescreenrecorder
     alacritty
     exa
     bat
