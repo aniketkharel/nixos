@@ -9,7 +9,7 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" "iwlwifi" "iwlmvm " ];
   boot.extraModulePackages = with config.boot.kernelPackages; [
-    rtl8192eu 
+    rtw89
  ];
 
   # file systems
