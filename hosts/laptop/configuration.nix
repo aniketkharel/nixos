@@ -46,7 +46,7 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
-  networking.hostName = "kratos-vm";
+  networking.hostName = "kratos";
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable =
@@ -62,9 +62,13 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
-  boot.loader.grub.enable = true;
-  boot.loader.grub.version = 2;
-  boot.loader.grub.device = "/dev/sda";
+  # Boot loader
+  boot.loader = {
+    systemd-boot.enable = true;
+    efi = {
+      canTouchEfiVariables = true;
+    };
+  };
 
   # fonts settings
   fonts = {

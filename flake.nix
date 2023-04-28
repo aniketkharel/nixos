@@ -1,9 +1,7 @@
 {
   inputs = {
-    # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
-    # You can access packages and modules from different nixpkgs revs
-    # at  neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -16,7 +14,7 @@
         "x86_64-darwin"
         "aarch64-darwin"
       ];
-      user-pc = "kratos";
+      user-laptop = "kratos";
       user-vm = "kratos-vm";
       user-work = "kratos-work";
     in
@@ -71,7 +69,7 @@
       # Available through 'home-manager --flake .#your-username@your-hostname'
       homeConfigurations = {
         # laptop user config
-        "${user-pc}@${user-pc}" = home-manager.lib.homeManagerConfiguration {
+        "${user-laptop}@${user-laptop}" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [
