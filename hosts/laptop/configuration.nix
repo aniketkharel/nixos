@@ -45,6 +45,7 @@
   # Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
+  hardware.firmware = [ pkgs.rtw89-firmware ];
 
   networking.hostName = "kratos";
   # Pick only one of the below networking options.
