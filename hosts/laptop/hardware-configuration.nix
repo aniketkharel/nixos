@@ -5,12 +5,13 @@
 
   # kernel modules
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
-  boot.blacklistedKernelModules = ["rtl8821cu"];
+  boot.blacklistedKernelModules = [ ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" "iwlwifi" "iwlmvm " ];
+  boot.kernelModules = [ "kvm-intel" "iwlwifi" "iwlmvm" "rtlwifi" ];
   boot.extraModulePackages = with config.boot.kernelPackages; [
-    rtw89
- ];
+
+  ];
+  boot.supportedFilesystems = [ "ntfs" ];
 
   # file systems
   fileSystems."/boot" = {
