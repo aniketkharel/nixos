@@ -8,6 +8,7 @@
     docker-compose
     neovim
     fd
+    binutils_nogold
     feh
     file
     fzf

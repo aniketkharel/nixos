@@ -165,9 +165,13 @@ bindsym F1 exec ~/.config/i3/scripts/keyhint-2
 # keybinding list in editor:
 # bindsym $mod+F1 exec xed ~/.config/i3/keybindings
 
-# Backlight control
-bindsym XF86MonBrightnessUp exec xbacklight +5 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
-bindsym XF86MonBrightnessDown exec xbacklight -5 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
+# xbacklight control
+#bindsym XF86MonBrightnessUp exec xbacklight +5 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
+#bindsym XF86MonBrightnessDown exec xbacklight -5 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
+
+# brightnessctl control
+bindsym XF86MonBrightnessUp exec brightnessctl s 10+
+bindsym XF86MonBrightnessDown exec brightnessctl s 10- 
 
 # change focus
 bindsym $mod+h focus left

@@ -63,10 +63,11 @@ in
     cargo-generate
     haskellPackages.greenclip
     emote
-    neovim-nightly
+    #neovim-nightly
     marksman
     gnumake
     sqlitebrowser
+    brightnessctl
   ];
 
   programs = {
@@ -85,6 +86,7 @@ in
     rofi = { source = ../configs/rofi; };
     git = { source = ../configs/git; };
     tmux = { source = ../configs/tmux; };
+    picom = { source = ../configs/picom; };
   };
 
   programs.home-manager.enable = true;

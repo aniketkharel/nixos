@@ -76,7 +76,7 @@
       initialPassword = "tt";
       isNormalUser = true;
       openssh.authorizedKeys.keys = [ ];
-      extraGroups = [ "wheel" "networkmanager" "docker" "audio" ];
+      extraGroups = [ "wheel" "networkmanager" "docker" "audio" "video" ];
     };
   };
 
