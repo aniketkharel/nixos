@@ -47,6 +47,6 @@
 
   # fonts settings
   fonts = {
-    fonts = with pkgs; [ (nerdfonts.override { fonts = [ "CascadiaCode" "JetBrainsMono" ]; }) ];
+    fonts = with pkgs; [ (nerdfonts.override { fonts = [ "CascadiaCode" ]; }) ];
   };
 }
