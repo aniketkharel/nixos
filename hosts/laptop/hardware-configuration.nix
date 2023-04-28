@@ -4,15 +4,18 @@
   imports = [ ];
 
   # kernel modules
-  boot.initrd.availableKernelModules = [ "ata_piix" "ohci_pci" "ehci_pci" "ahci" "sd_mod" "sr_mod" ];
-  boot.initrd.kernelModules = [ "amdgpu" ];
-  boot.kernelModules = [ "iwlwifi" "iwlmvm " ];
-  boot.extraModulePackages = [ ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
+  boot.blacklistedKernelModules = ["rtl8821cu"];
+  boot.initrd.kernelModules = [ ];
+  boot.kernelModules = [ "kvm-intel" "iwlwifi" "iwlmvm " ];
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+    rtl8192eu 
+ ];
 
   # file systems
   fileSystems."/boot" = {
     device = "/dev/disk/by-label/BOOT";
-    fsType = "fat32";
+    fsType = "vfat";
   };
 
   fileSystems."/" = {
@@ -23,7 +26,7 @@
   swapDevices = [ ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-
+  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   hardware.cpu.intel.updateMicrocode =
     lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
