@@ -3,6 +3,7 @@
   environment.systemPackages = with pkgs; [
     aspell
     aspellDicts.en
+    perl
     bind
     docker
     docker-compose

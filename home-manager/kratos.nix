@@ -63,7 +63,7 @@ in
     cargo-generate
     haskellPackages.greenclip
     emote
-    #neovim-nightly
+    # neovim-nightly
     marksman
     gnumake
     sqlitebrowser
