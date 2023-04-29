@@ -49,8 +49,6 @@ in
     gcc
     nodejs
     picom
-    i3
-    i3blocks
     rofi
     autotiling
     lazygit

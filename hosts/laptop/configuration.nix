@@ -42,6 +42,10 @@
     };
   };
 
+  # laptop specific packages
+  environment.systemPackages = with pkgs; [
+  ];
+
   # Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
@@ -103,8 +107,13 @@
       desktopManager = { xfce = { enable = true; }; };
       windowManager = {
         i3 = {
-          package = pkgs.i3-rounded;
           enable = true;
+          package = pkgs.i3-gaps;
+          extraPackages = with pkgs; [
+            i3status
+            i3lock
+            i3blocks
+          ];
         };
       };
     };

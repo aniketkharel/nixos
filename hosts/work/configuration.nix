@@ -42,6 +42,10 @@
     };
   };
 
+  # laptop specific packages
+  environment.systemPackages = with pkgs; [
+  ];
+
   # Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
@@ -94,7 +98,17 @@
         defaultSession = "xfce";
       };
       desktopManager = { xfce = { enable = true; }; };
-      windowManager = { i3 = { enable = true; }; };
+      windowManager = {
+        i3 = {
+          enable = true;
+          package = pkgs.i3-gaps;
+          extraPackages = with pkgs; [
+            i3status
+            i3lock
+            i3blocks
+          ];
+        };
+      };
       gnome = {
         gnome-keyring = { enable = true; };
       };

@@ -1,5 +1,5 @@
 # You can also use any non-zero value if you'd like to have a border
-default_border pixel 0
+#default_border pixel 0
 
 # autotiling
 exec_always --no-startup-id autotiling
@@ -29,9 +29,8 @@ new_window pixel 2
 hide_edge_borders both
 
 # Set inner/outer gaps
-#border_radius 5
-gaps inner all set 2
-gaps outer all set 2
+#gaps inner all set 2
+#gaps outer all set 2
 
 # show window title bars (not officially supported with i3gaps)
 #default_border normal
