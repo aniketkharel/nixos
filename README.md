@@ -1,11 +1,23 @@
 # NixOS Configrations Guides
 
-## Partitioning
+## Prereq
 
 ```sh
 # Should be 2.4+
 nix --version
 export NIX_CONFIG="experimental-features = nix-command flakes"
+
+```
+
+## Partitioning
+
+```sh
+parted /dev/sda -- mklabel msdos (gpt for uefi)
+
+parted /dev/sda -- mkpart primary 1MiB -8GiB (512MiB -8GiB for uefi)
+
+
+mkfs.ext4 -L nixos /dev/sda1
 ```
 
 ## Generate Configrations
@@ -25,15 +37,6 @@ nixos-install --flake .#hostname
 
 ```
 
-```sh
-parted /dev/sda -- mklabel msdos (gpt for uefi)
-
-parted /dev/sda -- mkpart primary 1MiB -8GiB (512MiB -8GiB for uefi)
-
-
-mkfs.ext4 -L nixos /dev/sda1
-```
-
 To apply home configrationsm run, this is with standalone installer.
 If you don't have home-manager installed, try,
 
@@ -42,7 +45,7 @@ nix shell nixpkgs#home-manager.
 ```
 
 ```sh
- home-manager --flake .#your-username@your-hostname'
+ home-manager switch --flake .#your-username@your-hostname
 ```
 
 ## Packages, services, settings, etc.
