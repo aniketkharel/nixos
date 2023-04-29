@@ -41,9 +41,9 @@ font:
     x: 0
     y: 0
   normal:
-    family: InconsolataLGC Nerd Font
+    family: FiraCode Nerd Font
     style: Regular
   bold:
-    family: InconsolataLGC Nerd Font
+    family: FiraCode Nerd Font
   italic:
-    family: InconsolataLGC Nerd Font
+    family: FiraCode Nerd Font

@@ -2,7 +2,7 @@
 exec_always --no-startup-id autotiling
 
 # Pango 
-font pango: CaskaydiaCove Nerd Font 12
+font pango: FiraCode Nerd Font 12
 
 # set the mod key to the winkey:
 set $mod Mod4
@@ -469,7 +469,7 @@ client.urgent		    	  $urgentred	$urgentred	$white	$yellowbrown  $yellowbrown
 # bar settings (input comes from i3blocks) #
 ############################################
  bar {
-	font pango: CaskaydiaCove Nerd Font 10
+	font pango: FiraCode Nerd Font 10
 	status_command i3blocks -c ~/.config/i3/i3blocks.conf
 	#i3bar_command i3bar --transparency
   # tray_output primary
