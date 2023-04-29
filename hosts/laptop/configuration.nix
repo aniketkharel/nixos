@@ -45,11 +45,12 @@
   # Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
+  hardware.bluetooth.enable = true;
   hardware.firmware = [ pkgs.rtw89-firmware ];
 
   networking.hostName = "kratos";
   # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable =
     true; # Easiest to use and most distros use this by default.
 
@@ -85,6 +86,7 @@
 
   services = {
     printing = { enable = true; };
+    blueman = { enable = true; };
     openssh = {
       enable = true;
       permitRootLogin = "no";

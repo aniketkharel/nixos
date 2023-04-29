@@ -88,9 +88,9 @@ if ($percent < 20) {
 }
 
 # print text
-print " ${label}";
+#print " ${label}";
 print " $full_text\n";
-print " ${label}";
+#print " ${label}";
 print " $short_text\n";
 
 # consider color and urgent flag only on discharge
