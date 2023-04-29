@@ -103,7 +103,7 @@
       desktopManager = { xfce = { enable = true; }; };
       windowManager = {
         i3 = {
-          package = pkgs.unstable.i3;
+          package = pkgs.i3-rounded;
           enable = true;
         };
       };
