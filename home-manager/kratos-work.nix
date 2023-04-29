@@ -28,8 +28,8 @@ in
   fonts = { fontconfig = { enable = true; }; };
 
   home = {
-    username = "kratos-vm";
-    homeDirectory = "/home/kratos-vm";
+    username = "kratos-work";
+    homeDirectory = "/home/kratos-work";
     sessionVariables = {
       SHELL = "zsh";
       EDITOR = "nvim";
@@ -44,7 +44,7 @@ in
     alacritty
     exa
     bat
-    unstable.tree-sitter
+    tree-sitter
     gcc
     nodejs
     picom

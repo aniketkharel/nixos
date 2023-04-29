@@ -98,12 +98,25 @@
       libinput = { enable = true; };
       displayManager = {
         lightdm = { enable = true; };
-        defaultSession = "xfce";
+        defaultSession = "none+i3";
       };
-
       desktopManager = { xfce = { enable = true; }; };
+      windowManager = {
+        i3 = {
+          package = pkgs.unstable.i3;
+          enable = true;
+        };
+      };
+    };
+    gnome = {
+      gnome-keyring = { enable = true; };
+    };
+  };
 
-      windowManager = { i3 = { enable = true; }; };
+  # enable programs
+  programs = {
+    seahorse = {
+      enable = true;
     };
   };
 

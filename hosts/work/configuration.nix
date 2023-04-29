@@ -67,7 +67,7 @@
   boot.loader.grub.device = "/dev/sda";
 
   users.users = {
-    kratos-vm = {
+    kratos-work = {
       shell = pkgs.zsh;
       initialPassword = "tt";
       isNormalUser = true;
@@ -93,10 +93,18 @@
         lightdm = { enable = true; };
         defaultSession = "xfce";
       };
-
       desktopManager = { xfce = { enable = true; }; };
-
       windowManager = { i3 = { enable = true; }; };
+      gnome = {
+        gnome-keyring = { enable = true; };
+      };
+    };
+  };
+
+  # enable programs
+  programs = {
+    seahorse = {
+      enable = true;
     };
   };
 

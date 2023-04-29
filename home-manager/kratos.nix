@@ -45,11 +45,12 @@ in
     alacritty
     exa
     bat
-    tree-sitter
+    unstable.tree-sitter
     gcc
     nodejs
     picom
     i3blocks
+    i3-rounded
     rofi
     autotiling
     lazygit
@@ -70,6 +71,7 @@ in
     brightnessctl
   ];
 
+  # enable programs
   programs = {
     git = {
       enable = true;

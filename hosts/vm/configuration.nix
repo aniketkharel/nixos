@@ -93,10 +93,18 @@
         lightdm = { enable = true; };
         defaultSession = "xfce";
       };
-
       desktopManager = { xfce = { enable = true; }; };
-
       windowManager = { i3 = { enable = true; }; };
+      gnome = {
+        gnome-keyring = { enable = true; };
+      };
+    };
+  };
+
+  # enable programs
+  programs = {
+    seahorse = {
+      enable = true;
     };
   };
 
