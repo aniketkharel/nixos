@@ -48,7 +48,6 @@ in
     gcc
     nodejs
     picom
-    i3blocks
     rofi
     autotiling
     lazygit
@@ -62,7 +61,7 @@ in
     cargo-generate
     haskellPackages.greenclip
     emote
-    neovim-nightly
+    #neovim-nightly
     postman
     marksman
     gnumake

@@ -109,10 +109,16 @@
           ];
         };
       };
-      gnome3 = {
-        gnome-keyring = { enable = true; };
-        seahorse = { enable = true; };
-      };
+    };
+    gnome = {
+      gnome-keyring = { enable = true; };
+    };
+  };
+
+  # enable programs
+  programs = {
+    seahorse = {
+      enable = true;
     };
   };
 
