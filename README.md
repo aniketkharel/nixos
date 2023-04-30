@@ -1,10 +1,24 @@
-# NixOS Configrations Guides
+<!--toc:start-->
+- [Guides](#guides)
+  - [Environment](#environment)
+  - [Partitioning](#partitioning)
+  - [Generate Configrations](#generate-configrations)
+- [Setup](#setup)
+  - [Packages, services, settings, etc.](#packages-services-settings-etc)
+    - [NixEnv](#nixenv)
+  - [Post Setup](#post-setup)
+    - [Node](#node)
+  - [Reference](#reference)
+<!--toc:end-->
 
-## Prereq
+# Guides
+
+## Environment
 
 ```sh
 # Should be 2.4+
 nix --version
+
 export NIX_CONFIG="experimental-features = nix-command flakes"
 
 ```
@@ -69,6 +83,17 @@ nix-env -uninstall htop
 ```
 
 _man configrations.nix_ for more docs.
+
+## Post Setup
+
+### Node
+
+```sh
+mkdir ~/nodejs_globals
+npm config set prefix '~/nodejs_globals'
+npm install -g instant-markdown-d
+# ln -s ~/nodejs_globals/bin/ ~/bin # optional, path already in zshrc
+```
 
 ## Reference
 
