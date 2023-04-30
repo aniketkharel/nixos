@@ -75,10 +75,7 @@ local plugins = {
 	"neovim/nvim-lspconfig",
 	"glepnir/lspsaga.nvim",
 	-- themes
-	{
-		"projekt0n/github-nvim-theme",
-		tag = "v0.0.7",
-	},
+  	{ 'rose-pine/neovim', name = 'rose-pine' },
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.0",

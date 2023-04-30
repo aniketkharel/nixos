@@ -1,17 +1,53 @@
--- github
-require("github-theme").setup({
-	theme_style = "light",
-	function_style = "italic",
-	sidebars = { "qf", "vista_kind", "terminal", "packer" },
-	-- Change the "hint" color to the "orange" color, and make the "error" color bright red
-	colors = { hint = "orange", error = "#ff0000" },
-	-- Overwrite the highlight groups
-	overrides = function(c)
-		return {
-			htmlTag = { fg = c.red, bg = "#282c34", sp = c.hint, style = "underline" },
-			DiagnosticHint = { link = "LspDiagnosticsDefaultHint" },
-			-- this will remove the highlight groups
-			TSField = {},
+-- rose-pine
+require('rose-pine').setup({
+	--- @usage 'auto'|'main'|'moon'|'dawn'
+	variant = 'auto',
+	--- @usage 'main'|'moon'|'dawn'
+	dark_variant = 'main',
+	bold_vert_split = false,
+	dim_nc_background = false,
+	disable_background = false,
+	disable_float_background = false,
+	disable_italics = false,
+
+	--- @usage string hex value or named color from rosepinetheme.com/palette
+	groups = {
+		background = 'base',
+		background_nc = '_experimental_nc',
+		panel = 'surface',
+		panel_nc = 'base',
+		border = 'highlight_med',
+		comment = 'muted',
+		link = 'iris',
+		punctuation = 'subtle',
+
+		error = 'love',
+		hint = 'iris',
+		info = 'foam',
+		warn = 'gold',
+
+		headings = {
+			h1 = 'iris',
+			h2 = 'foam',
+			h3 = 'rose',
+			h4 = 'gold',
+			h5 = 'pine',
+			h6 = 'foam',
 		}
-	end,
+		-- or set all headings at once
+		-- headings = 'subtle'
+	},
+
+	-- Change specific vim highlight groups
+	-- https://github.com/rose-pine/neovim/wiki/Recipes
+	highlight_groups = {
+		ColorColumn = { bg = 'rose' },
+
+		-- Blend colours against the "base" background
+		CursorLine = { bg = 'foam', blend = 10 },
+		StatusLine = { fg = 'love', bg = 'love', blend = 10 },
+	}
 })
+
+-- set scheme
+vim.cmd('colorscheme rose-pine')

@@ -44,13 +44,14 @@
 
   # laptop specific packages
   environment.systemPackages = with pkgs; [
+    teamviewer
   ];
 
   # Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
   hardware.bluetooth.enable = true;
-  hardware.firmware = [ pkgs.rtw89-firmware ];
+  #hardware.firmware = [ pkgs.rtl8723bs-firmware ];
 
   networking.hostName = "kratos";
   # Pick only one of the below networking options.

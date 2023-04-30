@@ -1,37 +1,44 @@
-# github light themes
 colors:
-  # Default colors
   primary:
-    background: "0xffffff"
-    foreground: "0x24292f"
-
-  # Normal colors
+    background: "0x191724"
+    foreground: "0xe0def4"
+  cursor:
+    text: "0xe0def4"
+    cursor: "0x524f67"
+  vi_mode_cursor:
+    text: "0xe0def4"
+    cursor: "0x524f67"
+  line_indicator:
+    foreground: None
+    background: None
+  selection:
+    text: "0xe0def4"
+    background: "0x403d52"
   normal:
-    black: "0x24292e"
-    red: "0xd73a49"
-    green: "0x28a745"
-    yellow: "0xdbab09"
-    blue: "0x0366d6"
-    magenta: "0x5a32a3"
-    cyan: "0x0598bc"
-    white: "0x6a737d"
-
-  # Bright colors
+    black: "0x26233a"
+    red: "0xeb6f92"
+    green: "0x31748f"
+    yellow: "0xf6c177"
+    blue: "0x9ccfd8"
+    magenta: "0xc4a7e7"
+    cyan: "0xebbcba"
+    white: "0xe0def4"
   bright:
-    black: "0x959da5"
-    red: "0xcb2431"
-    green: "0x22863a"
-    yellow: "0xb08800"
-    blue: "0x005cc5"
-    magenta: "0x5a32a3"
-    cyan: "0x3192aa"
-    white: "0xd1d5da"
-
-  indexed_colors:
-    - { index: 16, color: "0xd18616" }
-    - { index: 17, color: "0xcb2431" }
-
-# font configs
+    black: "0x6e6a86"
+    red: "0xeb6f92"
+    green: "0x31748f"
+    yellow: "0xf6c177"
+    blue: "0x9ccfd8"
+    magenta: "0xc4a7e7"
+    cyan: "0xebbcba"
+    white: "0xe0def4"
+  hints:
+    start:
+      foreground: "#908caa"
+      background: "#1f1d2e"
+    end:
+      foreground: "#6e6a86"
+      background: "#1f1d2e"
 font:
   size: 12
   offset:

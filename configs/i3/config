@@ -573,17 +573,18 @@ set $mediumgrey		#8b8b8b
 set $yellowbrown	#e1b700
 
 # Light theme setup for status bar
-set $lightBg	    #f0eff4
-set $urgentBg     #A31b34
-set $statusTexts	#2b4141
-set $active_border #494C41
+set $darkBg         #000000
+set $lightFg        #ffffff
+set $urgentBg       #A31b34
+set $statusTexts 	  #2b4141
+set $active_border  #494C41
 
 # define colors for windows:
 #class		        	    border		  bground		  text		indicator	    child_border
-client.focused		    	$darkblue   $lightBg	  $purple	$mediumgrey	  $lightblue
-client.unfocused	    	$darkblue	  $darkblue	  $grey		$darkgrey	    $grey
-client.focused_inactive	$darkblue	  $darkblue	  $grey		$black		    $black
-client.urgent		    	  $urgentred	$urgentred	$purple	$yellowbrown  $yellowbrown
+client.focused		    	$darkblue   $darkBg	    $lightFg	  $mediumgrey	  $lightblue
+client.unfocused	    	$darkblue	  $darkblue	  $lightFg		$darkgrey	    $grey
+client.focused_inactive	$darkblue	  $darkblue	  $lightFg		$black		    $black
+client.urgent		    	  $urgentred	$urgentred	$purple	    $yellowbrown  $yellowbrown
 
 ############################################
 # bar settings (input comes from i3blocks) #
@@ -599,12 +600,12 @@ client.urgent		    	  $urgentred	$urgentred	$purple	$yellowbrown  $yellowbrown
   strip_workspace_numbers no
   colors {
     separator           $purple
-    background          $lightBg
+    background          $darkBg
     statusline          $statusTexts
-    focused_workspace	  $active_border   $active_border	  $lightBg	   $purple
-    active_workspace	  $lightBg         $lightBg	        $statusTexts $purple
-    inactive_workspace  $statusTexts	   $lightBg  	      $statusTexts $purple
-    urgent_workspace	  $urgentBg	       $lightBg	        $white		   $purple
+    focused_workspace	  $active_border   $active_border	  $darkBg	   $purple
+    active_workspace	  $darkBg          $darkBg	        $statusTexts $purple
+    inactive_workspace  $statusTexts	   $darkBg  	      $statusTexts $purple
+    urgent_workspace	  $urgentBg	       $darkBg	        $white		   $purple
     }
 }
 
