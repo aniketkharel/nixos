@@ -44,7 +44,7 @@
 
   # laptop specific packages
   environment.systemPackages = with pkgs; [
-    teamviewer
+    anydesk
   ];
 
   # Enable sound.
