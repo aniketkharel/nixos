@@ -49,9 +49,7 @@ local plugins = {
 		end,
 	},
 	"ggandor/leap.nvim",
-	{
-		"iamcco/markdown-preview.nvim",
-	},
+  	"instant-markdown/vim-instant-markdown",
 	{
 		"jakewvincent/mkdnflow.nvim",
 		config = function()

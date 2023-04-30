@@ -36,7 +36,7 @@
       AGKOZAK_PROMPT_CHAR=( ❯ ❯ ❮ )
       autopair-init
       gita_greeter
-      export PATH=$PATH:~/.cargo/bin 
+      export PATH=$HOME/.cargo/bin:$HOME/nodejs_globals/bin:$PATH
     '';
 
     plugins = with pkgs; [
