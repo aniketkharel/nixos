@@ -95,7 +95,7 @@
       libinput = { enable = true; };
       displayManager = {
         lightdm = { enable = true; };
-        defaultSession = "xfce";
+        defaultSession = "none+i3";
       };
       desktopManager = { xfce = { enable = true; }; };
       windowManager = {
