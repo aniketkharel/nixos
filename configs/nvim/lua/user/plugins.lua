@@ -74,8 +74,7 @@ local plugins = {
 	"rafamadriz/friendly-snippets",
 	"neovim/nvim-lspconfig",
 	"glepnir/lspsaga.nvim",
-	-- themes
-  	{ 'rose-pine/neovim', name = 'rose-pine' },
+  "folke/tokyonight.nvim",
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.0",
