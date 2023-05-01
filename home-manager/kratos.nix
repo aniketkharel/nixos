@@ -43,6 +43,7 @@ in
     firefox
     flameshot
     alacritty
+    lxappearance
     exa
     bat
     unstable.tree-sitter
