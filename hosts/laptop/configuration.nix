@@ -45,6 +45,7 @@
   # laptop specific packages
   environment.systemPackages = with pkgs; [
     anydesk
+    python310Packages.pip
   ];
 
   # Enable sound.

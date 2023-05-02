@@ -44,6 +44,7 @@
 
   # laptop specific packages
   environment.systemPackages = with pkgs; [
+    python310Packages.pip
   ];
 
   # Enable sound.

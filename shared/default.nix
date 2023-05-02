@@ -42,6 +42,7 @@
     openssl
     zoxide
     marksman
+    pipes
   ];
 
   # system shell
