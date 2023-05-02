@@ -1,6 +1,7 @@
 { config, lib, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
+    zlib
     aspell
     aspellDicts.en
     perl
@@ -24,7 +25,7 @@
     man-pages
     ncdu
     psmisc
-    python3
+    python311
     ripgrep
     rsync
     shellcheck
