@@ -8,6 +8,8 @@
     enableAutosuggestions = true;
     enableCompletion = true;
     shellAliases = {
+      cls = "clear";
+      clr = "clear";
       sl = "exa";
       ls = "exa -al --icons";
       l = "exa -l";
