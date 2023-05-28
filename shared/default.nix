@@ -44,6 +44,7 @@
     zoxide
     marksman
     pipes
+    kitty
   ];
 
   # system shell
@@ -51,6 +52,6 @@
 
   # fonts settings
   fonts = {
-    fonts = with pkgs; [ (nerdfonts.override { fonts = [ "FiraCode" ]; }) ];
+    fonts = with pkgs; [ (nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) ];
   };
 }

@@ -43,7 +43,6 @@ in
   home.packages = with pkgs; [
     firefox
     flameshot
-    alacritty
     lxappearance
     exa
     bat

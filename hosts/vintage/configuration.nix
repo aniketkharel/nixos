@@ -50,7 +50,14 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
   hardware.bluetooth.enable = true;
-  #hardware.firmware = [ pkgs.rtl8723bs-firmware ];
+  hardware.firmware = [ 
+          pkgs.rtl8723bs-firmware
+          pkgs.intel2200BGFirmware
+          pkgs.rtl8192su-firmware
+          pkgs.rt5677-firmware
+          pkgs.rtl8723bs-firmware
+          pkgs.rtl8761b-firmware
+          pkgs.rtw88-firmware];
 
   networking.hostName = "aniketdev";
   # Pick only one of the below networking options.
