@@ -1,55 +1,51 @@
-<!--toc:start-->
-- [Guides](#guides)
-  - [Environment](#environment)
-  - [Partitioning](#partitioning)
-  - [Generate Configrations](#generate-configrations)
-- [Setup](#setup)
-  - [Packages, services, settings, etc.](#packages-services-settings-etc)
-    - [NixEnv](#nixenv)
-  - [Post Setup](#post-setup)
-    - [Node](#node)
-  - [Reference](#reference)
-<!--toc:end-->
+* Nixos Configrations
 
-# Guides
+Simple working configuration for my nixos.
 
-## Environment
+* Environment
 
-```sh
-# Should be 2.4+
-nix --version
+#+begin_bash options
 
-export NIX_CONFIG="experimental-features = nix-command flakes"
+export NIX_CONFIG="experimental-features = nix-command flakes" ```
 
-```
+#+end_bash
 
-## Partitioning
+* Partitioning
 
-```sh
+#+begin_bash options
+
 parted /dev/sda -- mklabel msdos (gpt for uefi)
 
 parted /dev/sda -- mkpart primary 1MiB -8GiB (512MiB -8GiB for uefi)
 
 
 mkfs.ext4 -L nixos /dev/sda1
-```
 
-## Generate Configrations
+#+end_bash
 
-```sh
+* Configrations
+
+** Hardwares
+
+#+begin_bash options
+
 nixos-generate-config --root /mnt
-```
 
-# Setup
+#+end_bash
 
-```sh
+* Installation
+
+#+begin_bash options
+
 sudo nixos-rebuild switch --flake .#hostname
 
 # or
 
 nixos-install --flake .#hostname
 
-```
+#+end_bash
+
+** Home Manager
 
 To apply home configrationsm run, this is with standalone installer.
 If you don't have home-manager installed, try,
@@ -62,9 +58,9 @@ nix shell nixpkgs#home-manager.
  home-manager switch --flake .#your-username@your-hostname
 ```
 
-## Packages, services, settings, etc.
+* Packages, services, settings, etc.
 
-### NixEnv
+** NixEnv
 
 To install and run applications.
 
@@ -84,9 +80,9 @@ nix-env -uninstall htop
 
 _man configrations.nix_ for more docs.
 
-## Post Setup
+* Post Setup
 
-### Node
+** Node
 
 ```sh
 mkdir ~/nodejs_globals
@@ -95,6 +91,6 @@ npm install -g instant-markdown-d
 # ln -s ~/nodejs_globals/bin/ ~/bin # optional, path already in zshrc
 ```
 
-## Reference
+* Reference
 
-[Matthias Benaets](https://www.youtube.com/watch?v=AGVXJ-TIv3Y&t=1164s)
+- [[Matthias Benaets][https://www.youtube.com/watch?v=AGVXJ-TIv3Y&t=1164s]]
