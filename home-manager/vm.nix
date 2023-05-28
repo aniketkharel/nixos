@@ -70,11 +70,6 @@ in
 
   # enable programs
   programs = {
-    git = {
-      enable = true;
-      userName = "aniketkhareldev";
-      userEmail = "aniketkhareldev@gmail.com";
-    };
   };
 
   programs.home-manager.enable = true;
