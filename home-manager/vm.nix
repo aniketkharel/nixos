@@ -8,8 +8,6 @@ in
 
     # Or modules exported from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModules.default
-
-    # You can also split up your configuration and import pieces of it here:
     ../modules/home-manager
   ];
 
@@ -30,8 +28,8 @@ in
   fonts = { fontconfig = { enable = true; }; };
 
   home = {
-    username = "kratos";
-    homeDirectory = "/home/kratos";
+    username = "aniketdev";
+    homeDirectory = "/home/aniketdev";
     sessionVariables = {
       SHELL = "zsh";
       EDITOR = "nvim";
@@ -43,11 +41,10 @@ in
   home.packages = with pkgs; [
     firefox
     flameshot
+    simplescreenrecorder
     alacritty
-    lxappearance
     exa
     bat
-    unstable.tree-sitter
     gcc
     nodejs
     picom
@@ -64,11 +61,12 @@ in
     cargo-generate
     haskellPackages.greenclip
     emote
-    # neovim-nightly
+    postman
     marksman
     gnumake
     sqlitebrowser
-    brightnessctl
+    python310Packages.pip
+    emacs 
   ];
 
   # enable programs
@@ -88,7 +86,6 @@ in
     rofi = { source = ../configs/rofi; };
     git = { source = ../configs/git; };
     tmux = { source = ../configs/tmux; };
-    picom = { source = ../configs/picom; };
   };
 
   programs.home-manager.enable = true;

@@ -17,9 +17,9 @@
         "x86_64-darwin"
         "aarch64-darwin"
       ];
-      user-laptop = "kratos";
-      user-vm = "kratos-vm";
-      user-work = "kratos-work";
+      vintage = "aniketdev";
+      vm = "aniketdev";
+      work = "aniketdev";
     in
     rec {
       # Acessible through 'nix build', 'nix shell', etc
@@ -53,10 +53,10 @@
           ];
         };
 
-        laptop = nixpkgs.lib.nixosSystem {
+        vintage = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           modules = [
-            ./hosts/laptop/configuration.nix
+            ./hosts/vintage/configuration.nix
           ];
         };
 
@@ -72,27 +72,27 @@
       # Available through 'home-manager --flake .#your-username@your-hostname'
       homeConfigurations = {
         # laptop user config
-        "${user-laptop}@${user-laptop}" = home-manager.lib.homeManagerConfiguration {
+        "${vintage}@${vintage}" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [
-            ./home-manager/kratos.nix
+            ./home-manager/vintage.nix
           ];
         };
         # vm user configs
-        "${user-vm}@${user-vm}" = home-manager.lib.homeManagerConfiguration {
+        "${vm}@${vm}" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [
-            ./home-manager/kratos-vm.nix
+            ./home-manager/vm.nix
           ];
         };
         # work user configs
-        "${user-work}@${user-work}" = home-manager.lib.homeManagerConfiguration {
+        "${work}@${work}" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [
-            ./home-manager/kratos-work.nix
+            ./home-manager/work.nix
           ];
         };
       };

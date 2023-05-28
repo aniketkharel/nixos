@@ -44,8 +44,6 @@
 
   # laptop specific packages
   environment.systemPackages = with pkgs; [
-    anydesk
-    python310Packages.pip
   ];
 
   # Enable sound.
@@ -54,7 +52,7 @@
   hardware.bluetooth.enable = true;
   #hardware.firmware = [ pkgs.rtl8723bs-firmware ];
 
-  networking.hostName = "kratos";
+  networking.hostName = "aniketdev";
   # Pick only one of the below networking options.
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable =
@@ -79,7 +77,7 @@
   };
 
   users.users = {
-    kratos = {
+    aniketdev = {
       shell = pkgs.zsh;
       initialPassword = "tt";
       isNormalUser = true;

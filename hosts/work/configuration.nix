@@ -50,7 +50,7 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
-  networking.hostName = "kratos-vm";
+  networking.hostName = "aniketdev";
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable =
@@ -71,7 +71,7 @@
   boot.loader.grub.device = "/dev/sda";
 
   users.users = {
-    kratos-work = {
+    aniketdev = {
       shell = pkgs.zsh;
       initialPassword = "tt";
       isNormalUser = true;

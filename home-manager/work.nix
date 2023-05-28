@@ -28,8 +28,8 @@ in
   fonts = { fontconfig = { enable = true; }; };
 
   home = {
-    username = "kratos-vm";
-    homeDirectory = "/home/kratos-vm";
+    username = "aniketdev";
+    homeDirectory = "/home/aniketdev";
     sessionVariables = {
       SHELL = "zsh";
       EDITOR = "nvim";
@@ -45,10 +45,10 @@ in
     alacritty
     exa
     bat
-    unstable.tree-sitter
     gcc
     nodejs
     picom
+    i3blocks
     rofi
     autotiling
     lazygit
@@ -62,7 +62,7 @@ in
     cargo-generate
     haskellPackages.greenclip
     emote
-    #neovim-nightly
+    neovim-nightly
     postman
     marksman
     gnumake
