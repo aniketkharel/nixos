@@ -68,6 +68,7 @@ in
     brightnessctl
     anydesk
     python310Packages.pip
+    emacs
   ];
 
   # enable programs

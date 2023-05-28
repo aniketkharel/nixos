@@ -66,6 +66,7 @@ in
     marksman
     gnumake
     sqlitebrowser
+    emacs
   ];
 
   # enable programs
