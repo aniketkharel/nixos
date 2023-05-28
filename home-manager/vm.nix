@@ -78,16 +78,6 @@ in
     };
   };
 
-  # xdf neovim configs
-  xdg.configFile = {
-    nvim = { source = ../configs/nvim; };
-    alacritty = { source = ../configs/alacritty; };
-    i3 = { source = ../configs/i3; };
-    rofi = { source = ../configs/rofi; };
-    git = { source = ../configs/git; };
-    tmux = { source = ../configs/tmux; };
-  };
-
   programs.home-manager.enable = true;
 
   # Nicely reload system units when changing configs
