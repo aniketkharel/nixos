@@ -43,25 +43,17 @@
   };
 
   # laptop specific packages
-  environment.systemPackages = with pkgs; [
-  ];
+  environment.systemPackages = with pkgs; [ ];
 
   # Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
   hardware.bluetooth.enable = true;
-  hardware.firmware = [ 
-          pkgs.rtl8723bs-firmware
-          pkgs.intel2200BGFirmware
-          pkgs.rtl8192su-firmware
-          pkgs.rt5677-firmware
-          pkgs.rtl8723bs-firmware
-          pkgs.rtl8761b-firmware
-          pkgs.rtw88-firmware];
+  hardware.firmware = [ pkgs.wireless-regdb ];
 
   networking.hostName = "aniketdev";
   # Pick only one of the below networking options.
-  #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  #networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable =
     true; # Easiest to use and most distros use this by default.
 
@@ -78,9 +70,7 @@
   # Boot loader
   boot.loader = {
     systemd-boot.enable = true;
-    efi = {
-      canTouchEfiVariables = true;
-    };
+    efi = { canTouchEfiVariables = true; };
   };
 
   users.users = {
@@ -116,25 +106,15 @@
         i3 = {
           enable = true;
           package = pkgs.i3-gaps;
-          extraPackages = with pkgs; [
-            i3status
-            i3lock
-            i3blocks
-          ];
+          extraPackages = with pkgs; [ i3status i3lock i3blocks ];
         };
       };
     };
-    gnome = {
-      gnome-keyring = { enable = true; };
-    };
+    gnome = { gnome-keyring = { enable = true; }; };
   };
 
   # enable programs
-  programs = {
-    seahorse = {
-      enable = true;
-    };
-  };
+  programs = { seahorse = { enable = true; }; };
 
   #docker
   virtualisation = { docker = { enable = true; }; };

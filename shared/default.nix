@@ -1,5 +1,4 @@
-{ config, lib, pkgs, ... }:
-{
+{ config, lib, pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     zlib
     aspell
@@ -38,6 +37,8 @@
     which
     whois
     sysstat
+    lm_sensors
+    qpdfview
     xclip
     pkg-config
     openssl
@@ -45,6 +46,9 @@
     marksman
     pipes
     kitty
+    hwinfo
+    libnotify
+    dunst
   ];
 
   # system shell
@@ -52,6 +56,7 @@
 
   # fonts settings
   fonts = {
-    fonts = with pkgs; [ (nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) ];
+    fonts = with pkgs;
+      [ (nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) ];
   };
 }
