@@ -102,3 +102,4 @@ Wireless Driver not supported on vintage host. *rtl8723be*.
 
 - [[Matthias Benaets][https://www.youtube.com/watch?v=AGVXJ-TIv3Y&t=1164s]]
 - https://github.com/yrashk/nix-home/blob/master/home.nix
+- https://discourse.nixos.org/t/xmodmap-keyboard-layout-customization-question/11522
