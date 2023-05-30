@@ -49,7 +49,7 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
   hardware.bluetooth.enable = true;
-  hardware.firmware = [ pkgs.wireless-regdb ];
+  hardware.firmware = [ ];
 
   networking.hostName = "aniketdev";
   # Pick only one of the below networking options.
@@ -75,7 +75,7 @@
 
   users.users = {
     aniketdev = {
-      shell = pkgs.zsh;
+      shell = pkgs.fish;
       initialPassword = "tt";
       isNormalUser = true;
       openssh.authorizedKeys.keys = [ ];

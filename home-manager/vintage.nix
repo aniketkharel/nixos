@@ -1,7 +1,6 @@
 { inputs, outputs, lib, config, pkgs, ... }:
 let
-in
-{
+in {
   imports = [
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules
@@ -47,6 +46,7 @@ in
     exa
     bat
     gcc
+    grc
     nodejs
     picom
     rofi
@@ -72,8 +72,7 @@ in
   ];
 
   # enable programs
-  programs = {
-  };
+  programs = { };
 
   programs.home-manager.enable = true;
 

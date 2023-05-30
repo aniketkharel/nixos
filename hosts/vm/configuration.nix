@@ -68,7 +68,7 @@
 
   users.users = {
     aniketdev = {
-      shell = pkgs.zsh;
+      shell = pkgs.fish;
       initialPassword = "tt";
       isNormalUser = true;
       openssh.authorizedKeys.keys = [ ];
@@ -98,25 +98,15 @@
         i3 = {
           enable = true;
           package = pkgs.i3-gaps;
-          extraPackages = with pkgs; [
-            i3status
-            i3lock
-            i3blocks
-          ];
+          extraPackages = with pkgs; [ i3status i3lock i3blocks ];
         };
       };
     };
-    gnome = {
-      gnome-keyring = { enable = true; };
-    };
+    gnome = { gnome-keyring = { enable = true; }; };
   };
 
   # enable programs
-  programs = {
-    seahorse = {
-      enable = true;
-    };
-  };
+  programs = { seahorse = { enable = true; }; };
 
   #docker
   virtualisation = { docker = { enable = true; }; };

@@ -14,7 +14,7 @@
     file
     fzf
     git
-    zsh
+    fish
     gnum4
     gnupg
     htop
@@ -35,6 +35,8 @@
     wget
     curl
     which
+    xorg.xmodmap
+    tldr
     whois
     sysstat
     lm_sensors
@@ -42,7 +44,6 @@
     xclip
     pkg-config
     openssl
-    zoxide
     marksman
     pipes
     kitty
