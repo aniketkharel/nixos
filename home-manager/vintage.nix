@@ -43,7 +43,6 @@ in
   home.packages = with pkgs; [
     firefox
     flameshot
-    alacritty
     lxappearance
     exa
     bat
@@ -69,26 +68,11 @@ in
     brightnessctl
     anydesk
     python310Packages.pip
+    emacs
   ];
 
   # enable programs
   programs = {
-    git = {
-      enable = true;
-      userName = "aniketkhareldev";
-      userEmail = "aniketkhareldev@gmail.com";
-    };
-  };
-
-  # xdf neovim configs
-  xdg.configFile = {
-    nvim = { source = ../configs/nvim; };
-    alacritty = { source = ../configs/alacritty; };
-    i3 = { source = ../configs/i3; };
-    rofi = { source = ../configs/rofi; };
-    git = { source = ../configs/git; };
-    tmux = { source = ../configs/tmux; };
-    picom = { source = ../configs/picom; };
   };
 
   programs.home-manager.enable = true;

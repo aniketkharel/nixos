@@ -37,7 +37,6 @@
       eval "$(zoxide init zsh)"
       AGKOZAK_PROMPT_CHAR=( ❯ ❯ ❮ )
       autopair-init
-      gita_greeter
       export PATH=$HOME/.cargo/bin:$HOME/nodejs_globals/bin:$PATH
     '';
 

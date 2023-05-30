@@ -17,9 +17,9 @@
         "x86_64-darwin"
         "aarch64-darwin"
       ];
-      vintage = "aniketdev";
-      vm = "aniketdev";
-      work = "aniketdev";
+      vintage = "vintage";
+      vm = "vm";
+      work = "work";
     in
     rec {
       # Acessible through 'nix build', 'nix shell', etc

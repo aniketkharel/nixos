@@ -42,7 +42,6 @@ in
     firefox
     flameshot
     simplescreenrecorder
-    alacritty
     exa
     bat
     gcc
@@ -67,25 +66,11 @@ in
     marksman
     gnumake
     sqlitebrowser
+    emacs
   ];
 
   # enable programs
   programs = {
-    git = {
-      enable = true;
-      userName = "aniketkhareldev";
-      userEmail = "aniketkhareldev@gmail.com";
-    };
-  };
-
-  # xdf neovim configs
-  xdg.configFile = {
-    nvim = { source = ../configs/nvim; };
-    alacritty = { source = ../configs/alacritty; };
-    i3 = { source = ../configs/i3; };
-    rofi = { source = ../configs/rofi; };
-    git = { source = ../configs/git; };
-    tmux = { source = ../configs/tmux; };
   };
 
   programs.home-manager.enable = true;

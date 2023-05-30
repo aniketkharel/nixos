@@ -1,12 +1,12 @@
-* Nixos Configrations
-
-Simple working configuration for my nixos.
+#+title: Nixos Configrations
+#+email: aniketkhareldev@gmail.com
+#+description: Simple working configuration for my nixos.
 
 * Environment
 
 #+begin_src sh
 
-export NIX_CONFIG="experimental-features = nix-command flakes" ```
+export NIX_CONFIG="experimental-features = nix-command flakes"
 
 #+end_src
 
@@ -14,11 +14,12 @@ export NIX_CONFIG="experimental-features = nix-command flakes" ```
 
 #+begin_src sh
 
-parted /dev/sda -- mklabel msdos (gpt for uefi)
+sudo mount /dev/disk/by-label/nixos /mnt
 
-parted /dev/sda -- mkpart primary 1MiB -8GiB (512MiB -8GiB for uefi)
+# in case of gpt, flag a f32 partition with esp,boot
 
-mkfs.ext4 -L nixos /dev/sda1
+sudo mkdir -p /mnt/boot
+sudo mount /dev/disk/by-label/BOOT /mnt/boot
 
 #+end_src
 
@@ -44,7 +45,7 @@ sudo nixos-install --flake '.#hostname'
 
 #+end_src
 
-#+RESULTS:
+#+end_src
 
 ** Home Manager
 
@@ -91,6 +92,11 @@ npm install -g instant-markdown-d
 # ln -s ~/nodejs_globals/bin/ ~/bin # optional, path already in zshrc
 
 #+end_src
+
+* Todo
+
+Wireless Driver not supported on vintage host. *rtl8723be*.
+[[https://github.com/NixOS/nixpkgs/issues/130280][Wifi not working]]
 
 * Reference
 

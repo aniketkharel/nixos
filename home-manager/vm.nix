@@ -42,7 +42,6 @@ in
     firefox
     flameshot
     simplescreenrecorder
-    alacritty
     exa
     bat
     gcc
