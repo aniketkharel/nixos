@@ -1,4 +1,13 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{ inputs, outputs, lib, config, pkgs, ... }:
+let
+  myCustomLayout = pkgs.writeText "xkb-layout" ''
+    clear lock
+    clear control
+    keycode 66 = Control_L
+    add control = Control_L
+    add Lock = Control_R
+  '';
+in {
   imports = [
     # If you want to use modules your own flake exports (from modules/nixos):
     # outputs.nixosModules.example
@@ -92,6 +101,8 @@
       displayManager = {
         lightdm = { enable = true; };
         defaultSession = "none+i3";
+        sessionCommands =
+          " sleep 5 && ${pkgs.xorg.xmodmap}/bin/xmodmap ${myCustomLayout}";
       };
       desktopManager = { xfce = { enable = true; }; };
       windowManager = {
@@ -103,6 +114,11 @@
       };
     };
     gnome = { gnome-keyring = { enable = true; }; };
+    emacs = {
+      enable = true;
+      package =
+        pkgs.emacs; # replace with emacs-gtk, or a version provided by the community overlay if desired.
+    };
   };
 
   # enable programs
