@@ -100,7 +100,9 @@ Wireless Driver not supported on vintage host. *rtl8723be*.
 
 * Reference
 
-- [[Matthias Benaets][https://www.youtube.com/watch?v=AGVXJ-TIv3Y&t=1164s]]
-- https://github.com/yrashk/nix-home/blob/master/home.nix
-- https://discourse.nixos.org/t/xmodmap-keyboard-layout-customization-question/11522
-- https://nixos.wiki/wiki/Keyboard_Layout_Customization#Using_xmodmap
+- [[https://www.youtube.com/watch?v=AGVXJ-TIv3Y&t=1164s][Matthias Benaets]]
+- [[https://github.com/yrashk/nix-home/blob/master/home.nix][Yrashk nixos]]
+- [[https://discourse.nixos.org/t/xmodmap-keyboard-layout-customization-question/11522][xmodmap keyboard]]
+- [[https://nixos.wiki/wiki/Keyboard_Layout_Customization#Using_xmodmap][Keyboard_Layout_Customization]]
+- [[https://nixos.wiki/wiki/Linux_kernel][Kernel Version]]
+- [[https://nixpkgs-manual-sphinx-markedown-example.netlify.app/configuration/linux-kernel.xml.html][Pinning Kernel Version]]

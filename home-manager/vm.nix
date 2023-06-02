@@ -45,6 +45,7 @@ in
     exa
     bat
     gcc
+    grc
     nodejs
     rofi
     autotiling

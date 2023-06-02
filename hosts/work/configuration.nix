@@ -125,7 +125,15 @@ in {
   };
 
   # enable programs
-  programs = { seahorse = { enable = true; }; };
+  programs = { 
+    seahorse = { enable = true; }; 
+    command-not-found = { enable = false; };
+  };
+
+  # polkit
+  security = {
+    polkit = { enable= true; };
+  };
 
   #docker
   virtualisation = { docker = { enable = true; }; };

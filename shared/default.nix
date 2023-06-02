@@ -15,6 +15,7 @@
     fzf
     git
     fish
+    starship
     gnum4
     gnupg
     htop
@@ -50,10 +51,13 @@
     hwinfo
     libnotify
     dunst
+    polkit
+    nix-index 
+    zoxide
   ];
 
   # system shell
-  environment.shells = with pkgs; [ zsh ];
+  environment.shells = with pkgs; [ fish ];
 
   # fonts settings
   fonts = {
