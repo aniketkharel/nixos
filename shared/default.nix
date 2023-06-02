@@ -54,6 +54,7 @@
     polkit
     nix-index 
     zoxide
+    volumeicon
   ];
 
   # system shell

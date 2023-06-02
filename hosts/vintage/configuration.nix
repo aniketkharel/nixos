@@ -119,6 +119,9 @@ in {
           package = pkgs.i3-gaps;
           extraPackages = with pkgs; [ i3status i3lock i3blocks ];
         };
+        qtile = {
+          enable = true;
+        };
       };
     };
     gnome = { gnome-keyring = { enable = true; }; };
