@@ -99,7 +99,7 @@ in {
       layout = "us";
       libinput = { enable = true; };
       displayManager = {
-        lightdm = { enable = true; };
+        gdm = { enable = true; };
         defaultSession = "none+i3";
         sessionCommands =
           " sleep 5 && ${pkgs.xorg.xmodmap}/bin/xmodmap ${myCustomLayout}";
@@ -126,14 +126,24 @@ in {
 
   # enable programs
   programs = { 
-    seahorse = { enable = true; }; 
+    seahorse = { enable = true; };
+    hyprland = { enable = true; };
     command-not-found = { enable = false; };
   };
 
   # polkit
   security = {
     polkit = { enable= true; };
-  };
+    pam = {
+      services =
+        {
+          swaylock = {
+            text = ''
+      auth include login
+    '';
+          };
+        };
+    };
 
   #docker
   virtualisation = { docker = { enable = true; }; };
