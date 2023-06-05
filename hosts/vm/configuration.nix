@@ -22,6 +22,7 @@ in {
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
     ../../shared
+    ./packages.nix
   ];
 
   nixpkgs = {
@@ -111,9 +112,6 @@ in {
           package = pkgs.i3-gaps;
           extraPackages = with pkgs; [ i3status i3lock i3blocks ];
         };
-        qtile = {
-          enable = true;
-        };
       };
     };
     gnome = { gnome-keyring = { enable = true; }; };
@@ -125,25 +123,16 @@ in {
   };
 
   # enable programs
-  programs = { 
+  programs = {
     seahorse = { enable = true; };
-    hyprland = { enable = true; };
     command-not-found = { enable = false; };
   };
 
   # polkit
   security = {
-    polkit = { enable= true; };
-    pam = {
-      services =
-        {
-          swaylock = {
-            text = ''
-      auth include login
-    '';
-          };
-        };
-    };
+    polkit = { enable = true; };
+    pam = { services = { }; };
+  };
 
   #docker
   virtualisation = { docker = { enable = true; }; };
@@ -154,4 +143,3 @@ in {
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "22.11";
 }
-

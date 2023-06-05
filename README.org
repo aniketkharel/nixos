@@ -93,6 +93,10 @@ npm install -g instant-markdown-d
 
 #+end_src
 
+** Fonts
+
+For all the glyphs and symbols please, copy all the fonts to nixos font directory. *~/.local/share/fonts*. see [[https://nixos.wiki/wiki/Fonts][nixos fonts]] for more details.
+
 * Todo
 
 Wireless Driver not supported on vintage host. *rtl8723be*.

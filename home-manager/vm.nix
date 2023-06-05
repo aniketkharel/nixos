@@ -1,7 +1,6 @@
 { inputs, outputs, lib, config, pkgs, ... }:
 let
-in
-{
+in {
   imports = [
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules
@@ -65,12 +64,10 @@ in
     gnumake
     sqlitebrowser
     python310Packages.pip
-    emacs 
   ];
 
   # enable programs
-  programs = {
-  };
+  programs = { };
 
   programs.home-manager.enable = true;
 

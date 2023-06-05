@@ -8,6 +8,7 @@
     docker
     docker-compose
     neovim
+    emacs
     fd
     binutils_nogold
     feh
@@ -50,21 +51,13 @@
     kitty
     hwinfo
     libnotify
+    libtool
     dunst
     polkit
     nix-index
     zoxide
     volumeicon
-    # need to seperate this TODO, wayland
-    discord # Discord
-    wofi # like rofi - app runner for wayland
-    wl-clipboard # wl-copy, wl-paste, required for clipboard to work in neovim
-    ffmpeg-full # has ffplay
-    pavucontrol # Gui for controlling audio
-    waybar # Wayland bar
-    swaylock # Wayland lock
-    glxinfo # opengl version I have
-    grim # backend
+    discord
   ];
 
   # system shell

@@ -114,9 +114,6 @@ in {
           package = pkgs.i3-gaps;
           extraPackages = with pkgs; [ i3status i3lock i3blocks ];
         };
-        qtile = {
-          enable = true;
-        };
       };
       gnome = { gnome-keyring = { enable = true; }; };
       emacs = {
@@ -128,15 +125,13 @@ in {
   };
 
   # enable programs
-  programs = { 
-    seahorse = { enable = true; }; 
+  programs = {
+    seahorse = { enable = true; };
     command-not-found = { enable = false; };
   };
 
   # polkit
-  security = {
-    polkit = { enable= true; };
-  };
+  security = { polkit = { enable = true; }; };
 
   #docker
   virtualisation = { docker = { enable = true; }; };
