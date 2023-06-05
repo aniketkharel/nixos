@@ -88,7 +88,7 @@ in {
     };
   };
 
-  services.logind.extraConfig = "RuntimeDirectorySize=1G";
+  services.logind.extraConfig = "RuntimeDirectorySize=2G";
 
   services = {
     printing = { enable = true; };
@@ -102,7 +102,7 @@ in {
       layout = "us";
       libinput = { enable = true; };
       displayManager = {
-        lightdm = { enable = true; };
+        gdm = { enable = true; };
         defaultSession = "none+i3";
         sessionCommands =
           " sleep 5 && ${pkgs.xorg.xmodmap}/bin/xmodmap ${myCustomLayout}";

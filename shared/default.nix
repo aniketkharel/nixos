@@ -1,5 +1,13 @@
 { config, lib, pkgs, ... }: {
   environment.systemPackages = with pkgs; [
+    firefox
+    flameshot
+    simplescreenrecorder
+    lxappearance
+    exa
+    bat
+    gcc
+    grc
     zlib
     aspell
     aspellDicts.en
@@ -8,6 +16,7 @@
     docker
     docker-compose
     neovim
+    tree-sitter
     emacs
     fd
     binutils_nogold

@@ -2,10 +2,14 @@
 
 {
   environment.systemPackages = with pkgs; [
-    #cmake
+    # database lifting
+    dbeaver
+
+    # cmake
     cmake
 
-    # node js packages
+    # node js and its packages
+    nodejs
     nodePackages.yarn
     nodePackages.pnpm
     nodePackages.vscode-langservers-extracted

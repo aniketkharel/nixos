@@ -1,7 +1,6 @@
 { inputs, outputs, lib, config, pkgs, ... }:
 let
-in
-{
+in {
   imports = [
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules
@@ -16,7 +15,6 @@ in
       outputs.overlays.additions
       outputs.overlays.modifications
       outputs.overlays.unstable-packages
-      inputs.neovim-nightly-overlay.overlay
     ];
     config = {
       allowUnfree = true;
@@ -39,13 +37,6 @@ in
   };
 
   home.packages = with pkgs; [
-    firefox
-    flameshot
-    simplescreenrecorder
-    exa
-    bat
-    gcc
-    nodejs
     picom
     i3blocks
     rofi
@@ -61,17 +52,14 @@ in
     cargo-generate
     haskellPackages.greenclip
     emote
-    neovim-nightly
     postman
     marksman
     gnumake
     sqlitebrowser
-    emacs
   ];
 
   # enable programs
-  programs = {
-  };
+  programs = { };
 
   programs.home-manager.enable = true;
 

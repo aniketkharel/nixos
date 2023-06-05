@@ -46,16 +46,6 @@ in {
   };
 
   home.packages = with pkgs; [
-    firefox
-    flameshot
-    lxappearance
-    exa
-    bat
-    gcc
-    grc
-    nodejs
-    picom
-    rofi
     autotiling
     lazygit
     lazydocker
@@ -74,7 +64,6 @@ in {
     brightnessctl
     anydesk
     python310Packages.pip
-    emacs
     # hyprpaper # Background image
     # hyprpicker # Pick color from screen
     # gscreenshot

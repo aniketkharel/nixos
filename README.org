@@ -82,6 +82,18 @@ nix-env -uninstall htop
 
 * Post Setup
 
+** Channels
+
+#+begin_src sh
+
+sudo nix-channel --list
+
+sudo nix-channel --add https://nixos.org/channels/nixpkgs-unstable unstable
+
+sudo nix-channel --update
+
+#+end_src
+
 ** Node
 
 #+begin_src sh

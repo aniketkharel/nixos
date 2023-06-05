@@ -15,7 +15,6 @@ in {
       outputs.overlays.additions
       outputs.overlays.modifications
       outputs.overlays.unstable-packages
-      inputs.neovim-nightly-overlay.overlay
     ];
     config = {
       allowUnfree = true;
@@ -38,14 +37,6 @@ in {
   };
 
   home.packages = with pkgs; [
-    firefox
-    flameshot
-    simplescreenrecorder
-    exa
-    bat
-    gcc
-    grc
-    nodejs
     rofi
     autotiling
     lazygit
