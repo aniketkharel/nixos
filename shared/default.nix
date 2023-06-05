@@ -71,6 +71,7 @@
     pavucontrol # Gui for controlling audio
     pulseaudio
     discord
+    xfce.thunar
   ];
 
   # system shell
