@@ -1,26 +1,6 @@
 { inputs, outputs, lib, config, pkgs, ... }:
 
 let
-  myCustomLayout = pkgs.writeText "xkb-layout" ''
-    clear lock
-    clear control
-    clear Mod1
-    clear Mod2
-    clear Mod3
-    clear Mod4
-    keycode 66 = Control_L
-    keycode 64 = Super_L
-    keycode 133 = Alt_L
-    add control = Control_L
-    add Lock = Control_R
-    add Mod4 = Super_L
-    add Mod1 = Alt_L
-    keycode 133 = Mode_switch
-    keycode 43 = h H Left H
-    keycode 44 = j J Down J
-    keycode 45 = k K Up K
-    keycode 46 = l L Right L
-  '';
 in {
   imports = [
     # If you want to use modules your own flake exports (from modules/nixos):
@@ -116,8 +96,7 @@ in {
       displayManager = {
         gdm = { enable = true; };
         defaultSession = "none+i3";
-        sessionCommands =
-          " sleep 5 && ${pkgs.xorg.xmodmap}/bin/xmodmap ${myCustomLayout}";
+        sessionCommands = "";
       };
       desktopManager = { xfce = { enable = true; }; };
       windowManager = {

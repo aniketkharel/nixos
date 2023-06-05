@@ -66,6 +66,10 @@
     nix-index
     zoxide
     volumeicon
+    ffmpeg-full # has ffplay
+    glxinfo # opengl version I have
+    pavucontrol # Gui for controlling audio
+    pulseaudio
     discord
   ];
 

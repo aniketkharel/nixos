@@ -1,12 +1,5 @@
 { inputs, outputs, lib, config, pkgs, ... }:
 let
-  myCustomLayout = pkgs.writeText "xkb-layout" ''
-    clear lock
-    clear control
-    keycode 66 = Control_L
-    add control = Control_L
-    add Lock = Control_R
-  '';
 in {
   imports = [
     # If you want to use modules your own flake exports (from modules/nixos):
@@ -18,7 +11,6 @@ in {
 
     # You can also split up your configuration and import pieces of it here:
     # ./users.nix
-    inputs.hyprland.nixosModules.default
 
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
@@ -31,12 +23,6 @@ in {
       outputs.overlays.additions
       outputs.overlays.modifications
       outputs.overlays.unstable-packages
-      # Waybar experimental features
-      (self: super: {
-        waybar = super.waybar.overrideAttrs (oldAttrs: {
-          mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-        });
-      })
     ];
     config = { allowUnfree = true; };
   };
@@ -121,15 +107,10 @@ in {
         mouse.accelProfile = "flat";
       };
       displayManager = {
-        gdm = {
-          enable = true;
-          wayland = true;
-        };
+        gdm = { enable = true; };
         defaultSession = "none+i3";
-        sessionCommands =
-          " sleep 5 && ${pkgs.xorg.xmodmap}/bin/xmodmap ${myCustomLayout}";
+        sessionCommands = "";
       };
-      desktopManager = { xfce = { enable = true; }; };
       windowManager = {
         i3 = {
           enable = true;
@@ -154,12 +135,6 @@ in {
     bluetooth.enable = true;
   };
 
-  # hyprland
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
-
   # enable programs
   programs = {
     seahorse = { enable = true; };
@@ -167,14 +142,7 @@ in {
   };
 
   # polkit
-  security = {
-    polkit = { enable = true; };
-    pam.services.swaylock = {
-      text = ''
-        auth include login
-      '';
-    };
-  };
+  security = { polkit = { enable = true; }; };
 
   #docker
   virtualisation = { docker = { enable = true; }; };

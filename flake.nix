@@ -4,7 +4,6 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs-channels/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
-    hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:

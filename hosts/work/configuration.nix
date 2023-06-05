@@ -1,12 +1,5 @@
 { inputs, outputs, lib, config, pkgs, ... }:
 let
-  myCustomLayout = pkgs.writeText "xkb-layout" ''
-    clear lock
-    clear control
-    keycode 66 = Control_L
-    add control = Control_L
-    add Lock = Control_R
-  '';
 in {
   imports = [
     # If you want to use modules your own flake exports (from modules/nixos):
@@ -22,6 +15,7 @@ in {
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
     ../../shared
+    ./packages.nix
   ];
 
   nixpkgs = {
@@ -49,6 +43,12 @@ in {
       # Deduplicate and optimize nix store
       auto-optimise-store = true;
     };
+
+    # For nix-direnv
+    extraOptions = ''
+      keep-outputs = true
+      keep-derivations = true
+    '';
   };
 
   # laptop specific packages
@@ -56,11 +56,10 @@ in {
 
   # Enable sound.
   sound.enable = true;
-  hardware.pulseaudio.enable = true;
 
   networking.hostName = "aniketdev";
   # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  #networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable =
     true; # Easiest to use and most distros use this by default.
 
@@ -74,9 +73,11 @@ in {
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
-  boot.loader.grub.enable = true;
-  boot.loader.grub.version = 2;
-  boot.loader.grub.device = "/dev/sda";
+  # Boot loader
+  boot.loader = {
+    systemd-boot.enable = true;
+    efi = { canTouchEfiVariables = true; };
+  };
 
   users.users = {
     aniketdev = {
@@ -84,7 +85,7 @@ in {
       initialPassword = "tt";
       isNormalUser = true;
       openssh.authorizedKeys.keys = [ ];
-      extraGroups = [ "wheel" "networkmanager" "docker" "audio" ];
+      extraGroups = [ "wheel" "networkmanager" "docker" "audio" "video" ];
     };
   };
 
@@ -92,6 +93,7 @@ in {
 
   services = {
     printing = { enable = true; };
+    blueman = { enable = true; };
     openssh = {
       enable = true;
       permitRootLogin = "no";
@@ -100,14 +102,15 @@ in {
     xserver = {
       enable = true;
       layout = "us";
-      libinput = { enable = true; };
+      libinput = {
+        enable = true;
+        mouse.accelProfile = "flat";
+      };
       displayManager = {
         gdm = { enable = true; };
         defaultSession = "none+i3";
-        sessionCommands =
-          " sleep 5 && ${pkgs.xorg.xmodmap}/bin/xmodmap ${myCustomLayout}";
+        sessionCommands = "";
       };
-      desktopManager = { xfce = { enable = true; }; };
       windowManager = {
         i3 = {
           enable = true;
@@ -115,13 +118,21 @@ in {
           extraPackages = with pkgs; [ i3status i3lock i3blocks ];
         };
       };
-      gnome = { gnome-keyring = { enable = true; }; };
-      emacs = {
-        enable = true;
-        package =
-          pkgs.emacs; # replace with emacs-gtk, or a version provided by the community overlay if desired.
-      };
     };
+    gnome = { gnome-keyring = { enable = true; }; };
+    emacs = {
+      enable = true;
+      package =
+        pkgs.emacs; # replace with emacs-gtk, or a version provided by the community overlay if desired.
+    };
+  };
+
+  # hardware
+  hardware = {
+    opengl.enable = true;
+    pulseaudio.enable = true;
+    firmware = [ ];
+    bluetooth.enable = true;
   };
 
   # enable programs
