@@ -18,6 +18,7 @@ in {
 
     # You can also split up your configuration and import pieces of it here:
     # ./users.nix
+    inputs.hyprland.nixosModules.default
 
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
@@ -29,6 +30,12 @@ in {
       outputs.overlays.additions
       outputs.overlays.modifications
       outputs.overlays.unstable-packages
+      # Waybar experimental features
+      (self: super: {
+        waybar = super.waybar.overrideAttrs (oldAttrs: {
+          mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+        });
+      })
     ];
     config = { allowUnfree = true; };
   };
@@ -49,6 +56,12 @@ in {
       # Deduplicate and optimize nix store
       auto-optimise-store = true;
     };
+
+    # For nix-direnv
+    extraOptions = ''
+      keep-outputs = true
+      keep-derivations = true
+    '';
   };
 
   # laptop specific packages
@@ -56,9 +69,6 @@ in {
 
   # Enable sound.
   sound.enable = true;
-  hardware.pulseaudio.enable = true;
-  hardware.bluetooth.enable = true;
-  hardware.firmware = [ ];
 
   networking.hostName = "aniketdev";
   # Pick only one of the below networking options.
@@ -105,9 +115,15 @@ in {
     xserver = {
       enable = true;
       layout = "us";
-      libinput = { enable = true; };
+      libinput = {
+        enable = true;
+        mouse.accelProfile = "flat";
+      };
       displayManager = {
-        lightdm = { enable = true; };
+        gdm = {
+          enable = true;
+          wayland = true;
+        };
         defaultSession = "none+i3";
         sessionCommands =
           " sleep 5 && ${pkgs.xorg.xmodmap}/bin/xmodmap ${myCustomLayout}";
@@ -119,9 +135,6 @@ in {
           package = pkgs.i3-gaps;
           extraPackages = with pkgs; [ i3status i3lock i3blocks ];
         };
-        qtile = {
-          enable = true;
-        };
       };
     };
     gnome = { gnome-keyring = { enable = true; }; };
@@ -132,15 +145,34 @@ in {
     };
   };
 
+  # hardware
+  hardware = {
+    opengl.enable = true;
+    pulseaudio.enable = true;
+    firmware = [ ];
+    bluetooth.enable = true;
+  };
+
+  # hyprland
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
   # enable programs
-  programs = { 
-    seahorse = { enable = true; }; 
+  programs = {
+    seahorse = { enable = true; };
     command-not-found = { enable = false; };
   };
 
   # polkit
   security = {
-    polkit = { enable= true; };
+    polkit = { enable = true; };
+    pam.services.swaylock = {
+      text = ''
+        auth include login
+      '';
+    };
   };
 
   #docker

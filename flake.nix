@@ -20,19 +20,16 @@
       vintage = "vintage";
       vm = "vm";
       work = "work";
-    in
-    rec {
+    in rec {
       # Acessible through 'nix build', 'nix shell', etc
       packages = forAllSystems (system:
         let pkgs = nixpkgs.legacyPackages.${system};
-        in import ./pkgs { inherit pkgs; }
-      );
+        in import ./pkgs { inherit pkgs; });
       # Devshell for bootstrapping
       # Acessible through 'nix develop' or 'nix-shell' (legacy)
       devShells = forAllSystems (system:
         let pkgs = nixpkgs.legacyPackages.${system};
-        in import ./shell.nix { inherit pkgs; }
-      );
+        in import ./shell.nix { inherit pkgs; });
 
       # Your custom packages and modifications, exported as overlays
       overlays = import ./overlays { inherit inputs; };
@@ -48,23 +45,17 @@
       nixosConfigurations = {
         vm = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
-          modules = [
-            ./hosts/vm/configuration.nix
-          ];
+          modules = [ ./hosts/vm/configuration.nix ];
         };
 
         vintage = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
-          modules = [
-            ./hosts/vintage/configuration.nix
-          ];
+          modules = [ ./hosts/vintage/configuration.nix ];
         };
 
         work = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
-          modules = [
-            ./hosts/work/configuration.nix
-          ];
+          modules = [ ./hosts/work/configuration.nix ];
         };
       };
 
@@ -73,27 +64,24 @@
       homeConfigurations = {
         # laptop user config
         "${vintage}@${vintage}" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+          pkgs =
+            nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
           extraSpecialArgs = { inherit inputs outputs; };
-          modules = [
-            ./home-manager/vintage.nix
-          ];
+          modules = [ ./home-manager/vintage.nix ];
         };
         # vm user configs
         "${vm}@${vm}" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+          pkgs =
+            nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
           extraSpecialArgs = { inherit inputs outputs; };
-          modules = [
-            ./home-manager/vm.nix
-          ];
+          modules = [ ./home-manager/vm.nix ];
         };
         # work user configs
         "${work}@${work}" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+          pkgs =
+            nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
           extraSpecialArgs = { inherit inputs outputs; };
-          modules = [
-            ./home-manager/work.nix
-          ];
+          modules = [ ./home-manager/work.nix ];
         };
       };
     };

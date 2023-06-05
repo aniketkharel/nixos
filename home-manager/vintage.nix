@@ -29,6 +29,12 @@ in {
   fonts = { fontconfig = { enable = true; }; };
 
   home = {
+    # Home Manager is pretty good at managing dotfiles. The primary way to manage
+    # file = {
+    #   ".config/hypr/hyprland.conf".source = .config/hypr/hyprland.conf;
+    #   ".config/hypr/waybar".source = .config/hypr/waybar;
+    #   ".config/hypr/wofi".source = .config/hypr/wofi;
+    # };
     username = "aniketdev";
     homeDirectory = "/home/aniketdev";
     sessionVariables = {
@@ -69,10 +75,16 @@ in {
     anydesk
     python310Packages.pip
     emacs
+    # hyprpaper # Background image
+    # hyprpicker # Pick color from screen
+    # gscreenshot
   ];
 
   # enable programs
-  programs = { };
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+  };
 
   programs.home-manager.enable = true;
 
