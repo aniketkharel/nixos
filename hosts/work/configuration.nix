@@ -120,11 +120,6 @@ in {
       };
     };
     gnome = { gnome-keyring = { enable = true; }; };
-    emacs = {
-      enable = true;
-      package =
-        pkgs.emacs; # replace with emacs-gtk, or a version provided by the community overlay if desired.
-    };
   };
 
   # hardware
