@@ -4,8 +4,10 @@
   environment.systemPackages = with pkgs; [
     cmake # cmake
     rofi # rofi menu
+    conky
     alacritty # terminal
     xdotool
+    picom
 
     # node js and its packages
     nodejs
