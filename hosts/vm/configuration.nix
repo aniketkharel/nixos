@@ -94,7 +94,7 @@ in {
       layout = "us";
       libinput = { enable = true; };
       displayManager = {
-        gdm = { enable = true; };
+        lightdm = { enable = true; };
         defaultSession = "none+i3";
         sessionCommands = "";
       };

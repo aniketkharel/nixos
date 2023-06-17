@@ -7,6 +7,9 @@
 
     # cmake
     cmake
+    rofi  # rofi menu
+    alacritty # terminal
+    xdotool
 
     # node js and its packages
     nodejs
