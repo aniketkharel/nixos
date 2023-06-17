@@ -2,6 +2,7 @@
   environment.systemPackages = with pkgs; [
     firefox
     flameshot
+    pass
     simplescreenrecorder
     lxappearance
     exa
@@ -79,7 +80,6 @@
 
   # fonts settings
   fonts = {
-    fonts = with pkgs;
-      [ (nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) ];
+    fonts = with pkgs; [ (nerdfonts.override { fonts = [ "UbuntuMono" ]; }) ];
   };
 }

@@ -60,7 +60,8 @@ in {
   networking.hostName = "aniketdev";
   # Pick only one of the below networking options.
   #networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable =
+    true; # Easiest to use and most distros use this by default.
 
   # Set your time zone.
   time.timeZone = "Asia/Kathmandu";
@@ -75,9 +76,9 @@ in {
   # Boot loader
   boot.loader = {
     systemd-boot.enable = true;
-    efi = { 
-    	canTouchEfiVariables = true; 
-	efiSysMountPoint = "/boot/efi";
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot/efi";
     };
   };
 
@@ -139,8 +140,8 @@ in {
     seahorse = { enable = true; };
     command-not-found = { enable = false; };
     gnupg.agent = {
-	    enable = true;
-	    enableSSHSupport = true;
+      enable = true;
+      enableSSHSupport = true;
     };
   };
 
