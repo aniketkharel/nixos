@@ -3,6 +3,7 @@
     firefox
     flameshot
     pass
+    freshfetch
     simplescreenrecorder
     lxappearance
     exa
