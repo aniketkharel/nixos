@@ -114,6 +114,21 @@ For all the glyphs and symbols please, copy all the fonts to nixos font director
 Wireless Driver not supported on vintage host. *rtl8723be*.
 [[https://github.com/NixOS/nixpkgs/issues/130280][Wifi not working]]
 
+- https://laravelcode.com/post/wifi-networks-device-not-ready-error-solve-in-linux
+- https://github.com/rtlwifi-linux/rtlwifi_new
+
+#+begin_src sh
+
+mkdir -p /lib/firmware/rtlwifi
+git clone https://github.com/rtlwifi-linux/rtlwifi_new.git
+cd firmware/rtlwifi
+# and copy either rtl8723befw.bin  rtlwifi/
+cp rtl8723befw.bin rtlwifi/ /lib/firmware
+# and then reboot it worked yay !
+
+#+end_src
+
+
 * Reference
 
 - [[https://www.youtube.com/watch?v=AGVXJ-TIv3Y&t=1164s][Matthias Benaets]]
