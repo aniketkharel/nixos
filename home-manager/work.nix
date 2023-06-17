@@ -51,7 +51,7 @@ in {
     wasm-pack
     cargo-generate
     haskellPackages.greenclip
-    emote
+    rofi-emoji
     postman
     marksman
     gnumake

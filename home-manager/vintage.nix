@@ -56,7 +56,7 @@ in {
     wasm-pack
     cargo-generate
     haskellPackages.greenclip
-    emote
+    rofi-emoji
     marksman
     gnumake
     sqlitebrowser
