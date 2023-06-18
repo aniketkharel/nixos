@@ -27,8 +27,9 @@
     fzf
     git
     fish
-    starship
     gnum4
+    gparted
+    gnumake
     gnupg
     htop
     imagemagick
@@ -38,6 +39,7 @@
     ncdu
     psmisc
     python311
+    python310Packages.pip
     ripgrep
     rsync
     shellcheck
@@ -57,7 +59,6 @@
     xclip
     pkg-config
     openssl
-    marksman
     pipes
     kitty
     hwinfo
@@ -75,6 +76,21 @@
     discord
     xfce.thunar
     appimage-run
+    freetype
+    luarocks
+    gimp
+    rofi
+    rofi-emoji
+    sqlite
+    sqlitebrowser
+    cmake # cmake
+    conky # conky
+    alacritty # terminal
+    xdotool
+    autotiling
+    lazygit
+    lazydocker
+    anydesk
   ];
 
   # system shell

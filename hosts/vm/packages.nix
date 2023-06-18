@@ -4,13 +4,7 @@
   environment.systemPackages = with pkgs; [
     # database lifting
     postgresql_15
-    dbeaver   # client
-
-    # cmake
-    cmake
-    rofi  # rofi menu
-    alacritty # terminal
-    xdotool
+    dbeaver # client
 
     # node js and its packages
     nodejs

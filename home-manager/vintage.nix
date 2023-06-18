@@ -45,9 +45,6 @@ in {
   };
 
   home.packages = with pkgs; [
-    autotiling
-    lazygit
-    lazydocker
     rust-analyzer
     rustup
     rnix-lsp
@@ -57,15 +54,9 @@ in {
     haskellPackages.greenclip
     stylua
     sumneko-lua-language-server
-    rofi-emoji
     marksman
-    gnumake
-    sqlite
-    sqlitebrowser
     postman
     brightnessctl
-    anydesk
-    python310Packages.pip
   ];
 
   # enable programs
