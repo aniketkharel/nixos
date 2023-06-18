@@ -37,7 +37,6 @@ in {
   };
 
   home.packages = with pkgs; [
-    rofi
     autotiling
     lazygit
     lazydocker
@@ -45,15 +44,19 @@ in {
     rustup
     rnix-lsp
     nixfmt
-    lua-language-server
     wasm-pack
     cargo-generate
     haskellPackages.greenclip
+    stylua
+    sumneko-lua-language-server
     rofi-emoji
-    postman
     marksman
     gnumake
+    sqlite
     sqlitebrowser
+    brightnessctl
+    postman
+    anydesk
     python310Packages.pip
   ];
 

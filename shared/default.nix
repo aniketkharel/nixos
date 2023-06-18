@@ -18,6 +18,7 @@
     docker
     docker-compose
     neovim-nightly
+    emacs
     tree-sitter
     fd
     binutils_nogold

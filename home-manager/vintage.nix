@@ -60,7 +60,9 @@ in {
     rofi-emoji
     marksman
     gnumake
+    sqlite
     sqlitebrowser
+    postman
     brightnessctl
     anydesk
     python310Packages.pip
