@@ -73,6 +73,7 @@
     pulseaudio
     discord
     xfce.thunar
+    appimage-run
   ];
 
   # system shell

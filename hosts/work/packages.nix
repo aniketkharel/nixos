@@ -3,7 +3,8 @@
 {
   environment.systemPackages = with pkgs; [
     # database lifting
-    dbeaver
+    postgresql_15
+    dbeaver   # client
 
     # cmake
     cmake
