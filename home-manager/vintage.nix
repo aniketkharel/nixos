@@ -37,7 +37,7 @@ in {
     username = "aniketdev";
     homeDirectory = "/home/aniketdev";
     sessionVariables = {
-      SHELL = "zsh";
+      SHELL = "fish";
       EDITOR = "nvim";
       PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
       LD_LIBRARY_PATH = "${pkgs.zlib}/lib:$LD_LIBRARY_PATH";
@@ -52,7 +52,7 @@ in {
     rustup
     rnix-lsp
     nixfmt
-    sumneko-lua-language-server
+    lua-language-server
     wasm-pack
     cargo-generate
     haskellPackages.greenclip
@@ -63,9 +63,6 @@ in {
     brightnessctl
     anydesk
     python310Packages.pip
-    # hyprpaper # Background image
-    # hyprpicker # Pick color from screen
-    # gscreenshot
   ];
 
   # enable programs
