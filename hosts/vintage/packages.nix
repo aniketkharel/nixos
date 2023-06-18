@@ -9,6 +9,9 @@
     # compositor
     picom
 
+    # latex
+    tetex
+
     # node js and its packages
     nodejs
     nodePackages.yarn
