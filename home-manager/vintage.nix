@@ -52,10 +52,11 @@ in {
     rustup
     rnix-lsp
     nixfmt
-    lua-language-server
     wasm-pack
     cargo-generate
     haskellPackages.greenclip
+    stylua
+    sumneko-lua-language-server
     rofi-emoji
     marksman
     gnumake
