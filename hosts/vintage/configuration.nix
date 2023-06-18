@@ -23,6 +23,7 @@ in {
       outputs.overlays.additions
       outputs.overlays.modifications
       outputs.overlays.unstable-packages
+      inputs.neovim-nightly-overlay.overlay
     ];
     config = { allowUnfree = true; };
   };
@@ -52,7 +53,7 @@ in {
   };
 
   # laptop specific packages
-  environment.systemPackages = with pkgs; [ ];
+  environment.systemPackages = with pkgs; [];
 
   # Enable sound.
   sound.enable = true;

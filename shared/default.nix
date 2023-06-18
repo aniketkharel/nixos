@@ -17,7 +17,7 @@
     bind
     docker
     docker-compose
-    neovim
+    neovim-nightly
     tree-sitter
     fd
     binutils_nogold
