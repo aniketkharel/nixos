@@ -61,6 +61,7 @@ in {
     glow
     python310Packages.pynvim
     nodePackages.neovim
+    deno
   ];
 
   # enable programs
