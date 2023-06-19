@@ -58,6 +58,7 @@ in {
     marksman
     postman
     brightnessctl
+    glow
   ];
 
   # enable programs

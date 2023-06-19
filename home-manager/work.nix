@@ -48,6 +48,7 @@ in {
     sumneko-lua-language-server
     marksman
     postman
+    glow
   ];
 
   # enable programs
