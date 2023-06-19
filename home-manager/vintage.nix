@@ -59,6 +59,8 @@ in {
     postman
     brightnessctl
     glow
+    python310Packages.pynvim
+    nodePackages.neovim
   ];
 
   # enable programs
