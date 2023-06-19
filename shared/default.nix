@@ -10,6 +10,7 @@
     xorg.xinit
     xorg.xinput
     xorg.libfontenc
+    webkitgtk
     fontconfig
     freetype
     firefox

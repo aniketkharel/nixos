@@ -58,7 +58,6 @@ in {
     marksman
     postman
     brightnessctl
-    glow
     python310Packages.pynvim
     nodePackages.neovim
     deno
