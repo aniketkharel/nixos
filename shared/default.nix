@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }: {
   environment.systemPackages = with pkgs; [
-    # xorgs
+    fish
     xdg-desktop-portal-gtk
     xorg.libX11
     xorg.libX11.dev
@@ -9,7 +9,7 @@
     xorg.libXinerama
     xorg.xinit
     xorg.xinput
-    # fontconfigs
+    xorg.libfontenc
     fontconfig
     freetype
     firefox
@@ -106,7 +106,7 @@
   ];
 
   # system shell
-  environment.shells = with pkgs; [ bash ];
+  environment.shells = with pkgs; [ fish ];
 
   # fonts settings
   fonts = {
