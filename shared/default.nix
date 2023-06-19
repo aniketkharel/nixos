@@ -1,5 +1,17 @@
 { config, lib, pkgs, ... }: {
   environment.systemPackages = with pkgs; [
+    # xorgs
+    xdg-desktop-portal-gtk
+    xorg.libX11
+    xorg.libX11.dev
+    xorg.libxcb
+    xorg.libXft
+    xorg.libXinerama
+    xorg.xinit
+    xorg.xinput
+    # fontconfigs
+    fontconfig
+    freetype
     firefox
     flameshot
     pass
@@ -26,7 +38,6 @@
     file
     fzf
     git
-    fish
     gnum4
     gparted
     gnumake
@@ -85,7 +96,8 @@
     sqlitebrowser
     cmake # cmake
     conky # conky
-    alacritty # terminal
+    xfce.xfce4-terminal
+    kitty
     xdotool
     autotiling
     lazygit
@@ -94,7 +106,7 @@
   ];
 
   # system shell
-  environment.shells = with pkgs; [ fish ];
+  environment.shells = with pkgs; [ bash ];
 
   # fonts settings
   fonts = {

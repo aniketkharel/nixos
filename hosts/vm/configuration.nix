@@ -72,7 +72,7 @@ in {
 
   users.users = {
     aniketdev = {
-      shell = pkgs.fish;
+      shell = pkgs.bash;
       initialPassword = "tt";
       isNormalUser = true;
       openssh.authorizedKeys.keys = [ ];

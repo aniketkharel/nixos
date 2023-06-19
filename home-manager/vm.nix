@@ -29,9 +29,9 @@ in {
     username = "aniketdev";
     homeDirectory = "/home/aniketdev";
     sessionVariables = {
-      SHELL = "fish";
+      SHELL = "bash";
       EDITOR = "nvim";
-      PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
+      PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig:$PKG_CONFIG_PATH";
       LD_LIBRARY_PATH = "${pkgs.zlib}/lib:$LD_LIBRARY_PATH";
     };
   };

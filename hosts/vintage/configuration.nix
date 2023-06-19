@@ -53,7 +53,7 @@ in {
   };
 
   # laptop specific packages
-  environment.systemPackages = with pkgs; [];
+  environment.systemPackages = with pkgs; [ ];
 
   # Enable sound.
   sound.enable = true;
@@ -85,7 +85,7 @@ in {
 
   users.users = {
     aniketdev = {
-      shell = pkgs.fish;
+      shell = pkgs.bash;
       initialPassword = "tt";
       isNormalUser = true;
       openssh.authorizedKeys.keys = [ ];
