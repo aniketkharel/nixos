@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }: {
   environment.systemPackages = with pkgs; [
-    fish
+    zsh
     xdg-desktop-portal-gtk
     xorg.libX11
     xorg.libX11.dev

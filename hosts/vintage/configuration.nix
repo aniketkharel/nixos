@@ -85,7 +85,7 @@ in {
 
   users.users = {
     aniketdev = {
-      shell = pkgs.fish;
+      shell = pkgs.zsh;
       initialPassword = "tt";
       isNormalUser = true;
       openssh.authorizedKeys.keys = [ ];
