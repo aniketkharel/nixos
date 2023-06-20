@@ -64,6 +64,7 @@ in {
     gimp
     inkscape-with-extensions
     discord
+    wezterm
   ];
 
   # enable programs
