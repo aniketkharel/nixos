@@ -61,6 +61,9 @@ in {
     python310Packages.pynvim
     nodePackages.neovim
     deno
+    gimp
+    inkscape-with-extensions
+    discord
   ];
 
   # enable programs

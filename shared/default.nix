@@ -31,6 +31,7 @@
     docker
     docker-compose
     neovim-nightly
+    emacs
     tree-sitter
     fd
     binutils_nogold
@@ -84,18 +85,15 @@
     glxinfo # opengl version I have
     pavucontrol # Gui for controlling audio
     pulseaudio
-    discord
     xfce.thunar
     appimage-run
     freetype
     luarocks
-    gimp
     rofi
     rofi-emoji
     sqlite
     sqlitebrowser
     cmake # cmake
-    conky # conky
     xfce.xfce4-terminal
     kitty
     xdotool
