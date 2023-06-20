@@ -104,7 +104,7 @@
   ];
 
   # system shell
-  environment.shells = with pkgs; [ fish ];
+  environment.shells = with pkgs; [ bash ];
 
   # fonts settings
   fonts = {
