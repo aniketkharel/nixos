@@ -73,7 +73,6 @@
     pkg-config
     openssl
     pipes
-    kitty
     hwinfo
     libnotify
     libtool
@@ -96,7 +95,7 @@
     sqlitebrowser
     cmake # cmake
     xfce.xfce4-terminal
-    kitty
+    alacritty
     xdotool
     autotiling
     lazygit
