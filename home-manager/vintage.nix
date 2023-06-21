@@ -64,6 +64,7 @@ in {
     inkscape-with-extensions
     discord
     wezterm
+    zk
   ];
 
   # enable programs

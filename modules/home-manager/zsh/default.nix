@@ -8,14 +8,13 @@
     enableAutosuggestions = true;
     enableCompletion = true;
     shellAliases = {
-      sl = "exa";
-      ls = "exa -al --icons";
-      l = "exa -l";
-      la = "exa -la";
+      es = "exa -al --icons";
+      est = "exa -al --icons --tree";
       ip = "ip --color=auto";
       vim = "nvim";
       tmx = "tmux";
       ga = "git add .";
+      gs = "git status .";
       gaf = "git add";
       gcmsg = "git commit -m";
       ggpush = "git push origin";
@@ -36,6 +35,7 @@
       # jumper
       eval "$(zoxide init bash)"
       export SECOND_BRAIN="$HOME/org"
+      export ZK_NOTEBOOK_DIR="$HOME/org/zettlekastans/"
                               '';
 
     plugins = with pkgs; [

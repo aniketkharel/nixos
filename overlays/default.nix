@@ -3,11 +3,11 @@
 {
   additions = final: _prev: import ../pkgs { pkgs = final; };
 
-  # https://nixos.wiki/wiki/Overlays
+# https://nixos.wiki/wiki/Overlays
   modifications = final: prev: {
-    # example = prev.example.overrideAttrs (oldAttrs: rec {
-    # ...
-    # });
+# example = prev.example.overrideAttrs (oldAttrs: rec {
+# ...
+# });
   };
 
   unstable-packages = final: _prev: {

@@ -50,6 +50,8 @@ in {
     python310Packages.pynvim
     nodePackages.neovim
     deno
+    wezterm
+    zk
   ];
 
   # enable programs
