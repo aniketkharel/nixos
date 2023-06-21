@@ -65,6 +65,9 @@ in {
     discord
     wezterm
     zk
+
+    # funs
+    terminal-typeracer
   ];
 
   # enable programs
