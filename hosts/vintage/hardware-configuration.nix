@@ -6,7 +6,7 @@
   # kernel modules
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usbhid" "nvme" "uas" "usb_storage" "sd_mod" ];
   boot.blacklistedKernelModules = [ ];
-  boot.initrd.kernelModules = [ "amdgpu" ];
+  boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.supportedFilesystems = [ "ntfs" ];
 
