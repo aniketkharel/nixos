@@ -105,6 +105,7 @@ in {
     xserver = {
       enable = true;
       layout = "us";
+      videoDrivers = [ "amdgpu" ];
       libinput = {
         enable = true;
         mouse.accelProfile = "flat";
