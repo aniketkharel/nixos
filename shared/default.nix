@@ -3,6 +3,7 @@
     zsh
     harfbuzz
     xdg-desktop-portal-gtk
+    xorg.xorgserver
     xorg.libX11
     xorg.libX11.dev
     xorg.libxcb
@@ -91,6 +92,7 @@
     luarocks
     rofi
     rofi-emoji
+    dmenu
     sqlite
     sqlitebrowser
     cmake # cmake
