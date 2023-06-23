@@ -52,7 +52,6 @@
     man-pages
     ncdu
     psmisc
-    python311
     python310Packages.pip
     ripgrep
     rsync
@@ -73,7 +72,7 @@
     xclip
     pkg-config
     openssl
-    pipes
+    pipes-rs
     hwinfo
     libnotify
     libtool

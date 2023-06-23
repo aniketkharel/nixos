@@ -121,6 +121,7 @@ in {
           package = pkgs.i3-gaps;
           extraPackages = with pkgs; [ i3status i3lock i3blocks ];
         };
+        herbstluftwm = { enable = true; };
       };
     };
     gnome = { gnome-keyring = { enable = true; }; };
@@ -153,6 +154,11 @@ in {
 
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 22 ];
+
+  # system.copySystemConfiguration = true;
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.allowReboot = true;
+  system.autoUpgrade.channel = "https://channels.nixos.org/nixos-23.05";
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "22.11";

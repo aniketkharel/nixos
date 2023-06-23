@@ -65,6 +65,7 @@ in {
     discord
     wezterm
     zk
+    thefuck
 
     # funs
     terminal-typeracer
