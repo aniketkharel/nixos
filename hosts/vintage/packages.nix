@@ -31,8 +31,5 @@ in {
     python310Packages.cairocffi
     python310Packages.pip
     python310Packages.autopep8
-
-    # panel herbsflutwm
-    dzen2
   ];
 }
