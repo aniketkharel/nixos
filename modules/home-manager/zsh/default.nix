@@ -40,7 +40,7 @@
     initExtra = ''
       bindkey '^ ' autosuggest-accept
       # jumper
-      eval "$(zoxide init bash)"
+      eval "$(zoxide init zsh)"
       export SECOND_BRAIN="$HOME/org"
       export ZK_NOTEBOOK_DIR="$HOME/org/zettlekastans/"
                               '';
