@@ -23,6 +23,7 @@ in {
       outputs.overlays.additions
       outputs.overlays.modifications
       outputs.overlays.unstable-packages
+      inputs.neovim-nightly-overlay.overlay
     ];
     config = { allowUnfree = true; };
   };
@@ -106,15 +107,23 @@ in {
         mouse.accelProfile = "flat";
       };
       displayManager = {
-        lightdm = { enable = true; };
+        sddm = { enable = true; };
         defaultSession = "none+i3";
         sessionCommands = "";
       };
+      desktopManager = { xfce.enable = true; };
       windowManager = {
         i3 = {
           enable = true;
           package = pkgs.i3-gaps;
           extraPackages = with pkgs; [ i3status i3lock i3blocks ];
+        };
+        awesome = {
+          enable = true;
+          luaModules = with pkgs.luaPackages; [
+            luarocks # is the package manager for Lua modules
+            luadbi-mysql # Database abstraction layer
+          ];
         };
       };
     };
@@ -131,8 +140,13 @@ in {
 
   # enable programs
   programs = {
+    mtr = { enable = true; };
     seahorse = { enable = true; };
     command-not-found = { enable = false; };
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+    };
   };
 
   # polkit
@@ -144,7 +158,11 @@ in {
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 22 ];
 
+  # system.copySystemConfiguration = true;
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.allowReboot = true;
+  system.autoUpgrade.channel = "https://channels.nixos.org/nixos-23.05";
+
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "22.11";
 }
-

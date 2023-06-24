@@ -109,6 +109,7 @@
 
   # fonts settings
   fonts = {
-    fonts = with pkgs; [ (nerdfonts.override { fonts = [ "UbuntuMono" ]; }) ];
+    fonts = with pkgs;
+      [ (nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) ];
   };
 }

@@ -47,14 +47,18 @@ in {
     sumneko-lua-language-server
     marksman
     postman
+    brightnessctl
     python310Packages.pynvim
     nodePackages.neovim
     deno
     gimp
     inkscape-with-extensions
     discord
-    wezterm
     zk
+    thefuck
+
+    # funs
+    terminal-typeracer
   ];
 
   # enable programs
