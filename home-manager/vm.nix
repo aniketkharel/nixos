@@ -30,7 +30,7 @@ in {
     homeDirectory = "/home/aniketdev";
     sessionVariables = {
       EDITOR = "nvim";
-      PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig:$PKG_CONFIG_PATH";
+      PKG_CONFIG_PATH = "${pkgs.fontconfig.dev}/lib/pkgconfig:${pkgs.freetype.dev}/lib/pkgconfig";
       LD_LIBRARY_PATH = "${pkgs.zlib}/lib:$LD_LIBRARY_PATH";
     };
   };
