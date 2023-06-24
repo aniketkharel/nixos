@@ -69,6 +69,9 @@ in {
 
     # funs
     terminal-typeracer
+
+    # acp
+    acpi
   ];
 
   # enable programs

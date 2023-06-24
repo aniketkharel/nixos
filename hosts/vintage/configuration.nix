@@ -110,7 +110,7 @@ in {
         mouse.accelProfile = "flat";
       };
       displayManager = {
-        lightdm = { enable = true; };
+        sddm = { enable = true; };
         defaultSession = "none+i3";
         sessionCommands = "";
       };
@@ -120,6 +120,13 @@ in {
           enable = true;
           package = pkgs.i3-gaps;
           extraPackages = with pkgs; [ i3status i3lock i3blocks ];
+        };
+        awesome = {
+          enable = true;
+          luaModules = with pkgs.luaPackages; [
+            luarocks # is the package manager for Lua modules
+            luadbi-mysql # Database abstraction layer
+          ];
         };
       };
     };
