@@ -54,7 +54,6 @@ in {
     gimp
     inkscape-with-extensions
     discord
-    zk
     thefuck
 
     # funs

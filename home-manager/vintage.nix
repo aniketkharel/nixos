@@ -54,7 +54,6 @@ in {
     stylua
     sumneko-lua-language-server
     marksman
-    postman
     brightnessctl
     python310Packages.pynvim
     nodePackages.neovim
@@ -62,12 +61,9 @@ in {
     gimp
     inkscape-with-extensions
     discord
-    zk
     thefuck
-
     # funs
     terminal-typeracer
-
     # acp
     acpi
   ];
