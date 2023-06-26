@@ -2,10 +2,6 @@
 let
 in {
   environment.systemPackages = with pkgs; [
-    # database lifting
-    postgresql_15
-    dbeaver # client
-
     # compositor
     picom
 

@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }: {
   environment.systemPackages = with pkgs; [
-    zsh
+    fish
     harfbuzz
     xdg-desktop-portal-gtk
     xorg.xorgserver
@@ -105,7 +105,7 @@
   ];
 
   # system shell
-  environment.shells = with pkgs; [ bash ];
+  environment.shells = with pkgs; [ fish ];
 
   # fonts settings
   fonts = {
