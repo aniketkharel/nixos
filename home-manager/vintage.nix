@@ -67,6 +67,8 @@ in {
     terminal-typeracer
     # acp
     acpi
+    fd
+    fzf
   ];
 
   # enable programs

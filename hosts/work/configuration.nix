@@ -83,6 +83,7 @@ in {
   users.users = {
     aniketdev = {
       initialPassword = "tt";
+      shell = pkgs.fish;
       isNormalUser = true;
       openssh.authorizedKeys.keys = [ ];
       extraGroups = [ "wheel" "networkmanager" "docker" "audio" "video" ];

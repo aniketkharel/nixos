@@ -74,6 +74,7 @@ in {
     aniketdev = {
       initialPassword = "tt";
       isNormalUser = true;
+      shell = pkgs.fish;
       openssh.authorizedKeys.keys = [ ];
       extraGroups = [ "wheel" "networkmanager" "docker" "audio" ];
     };

@@ -79,11 +79,13 @@ in {
     systemd-boot.enable = true;
     efi = {
       canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot/efi";
     };
   };
 
   users.users = {
     aniketdev = {
+      shell = pkgs.fish;
       initialPassword = "tt";
       isNormalUser = true;
       openssh.authorizedKeys.keys = [ ];
