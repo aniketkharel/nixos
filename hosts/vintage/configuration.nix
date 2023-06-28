@@ -110,7 +110,7 @@ in {
         mouse.accelProfile = "flat";
       };
       displayManager = {
-        sddm = { enable = true; };
+        lightdm = { enable = true; };
         defaultSession = "none+i3";
         sessionCommands = "";
       };
