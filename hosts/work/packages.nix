@@ -40,7 +40,6 @@ in {
 
     #editor
     neovim-nightly
-    emacs
 
     # auth
     pass
